@@ -13,7 +13,7 @@ export default function Contact() {
       <SEO title={t.nav_contact} description="Contact us" />
       <section className="p-8 max-w-xl mx-auto">
         <h1 className="text-3xl font-bold mb-4">{t.nav_contact}</h1>
-        <form action="https://formspree.io/f/{your-code}" method="POST" className="space-y-4">
+        <form action="https://formspree.io/f/mzzvryrg" method="POST" className="space-y-4">
           <input
             type="text"
             name="name"

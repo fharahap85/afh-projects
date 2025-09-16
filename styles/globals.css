@@ -10,6 +10,22 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+
+  --font-script: Poppins;
+}
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fadeInUp {
+  animation: fadeInUp 0.4s ease forwards;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -23,4 +39,74 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+.bg-pattern {
+  background-color: #ffffff; /* biru gelap */
+  background-image: radial-gradient(rgba(0, 0, 0, 0.08) 2px, transparent 1px),
+    radial-gradient(rgba(255, 255, 255, 0.08) 1px, transparent 2px);
+  background-position: 0 0, 30px 30px;
+  background-size: 60px 60px;
+}
+
+@keyframes bgColorShift {
+  0% {
+    background-position: 0% 50%;
+    background-color: rgba(59, 130, 246, 0.2); /* biru muda */
+  }
+  25% {
+    background-position: 50% 100%;
+    background-color: rgba(99, 102, 241, 0.2); /* indigo */
+  }
+  50% {
+    background-position: 100% 50%;
+    background-color: rgba(16, 185, 129, 0.2); /* hijau emerald */
+  }
+  75% {
+    background-position: 50% 0%;
+    background-color: rgba(251, 191, 36, 0.2); /* kuning */
+  }
+  100% {
+    background-position: 0% 50%;
+    background-color: rgba(59, 130, 246, 0.2); /* biru muda */
+  }
+}
+
+.bg-animated-transparent {
+  background-image: linear-gradient(
+    120deg,
+    rgba(59, 130, 246, 0.3),
+    rgba(99, 102, 241, 0.3),
+    rgba(16, 185, 129, 0.3),
+    rgba(251, 191, 36, 0.3),
+    rgba(244, 63, 94, 0.3)
+  );
+  background-size: 400% 400%;
+  animation: bgColorShift 20s ease-in-out infinite;
+}
+
+.underline-animation {
+  position: relative;
+  display: inline-block;
+}
+
+.underline-animation::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 100%;
+  height: 2px;
+  background-color: #facc15; /* Tailwind yellow-400 */
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease-in-out;
+}
+
+.group:hover .underline-animation::after {
+  transform: scaleX(1);
+}
+
+.active-underline::after {
+  transform: scaleX(1);
 }
