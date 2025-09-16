@@ -3,6 +3,7 @@ import SEO from "../../components/SEO";
 import { useRouter } from "next/router";
 import en from "../../locales/en/common.json";
 import id from "../../locales/id/common.json";
+import Image from "next/image";
 
 export default function Services() {
   const { locale } = useRouter();
@@ -69,9 +70,11 @@ export default function Services() {
                 </ul>
               </div>
               <div>
-                <img
+                <Image
                   src="/assets/backend.png"
                   alt={t.services_backend_image_alt || "Ilustrasi Backend Development"}
+                  width={500} // Sesuaikan ukuran lebar gambar sesuai kebutuhan
+                  height={300} // Sesuaikan ukuran tinggi gambar sesuai kebutuhan
                   className="rounded-lg shadow-xl w-full"
                 />
               </div>

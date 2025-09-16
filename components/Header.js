@@ -1,5 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import NavLink from "../components/NavLink";
 import { useRouter } from "next/router";
 import en from "../locales/en/common.json";
@@ -134,7 +135,13 @@ export default function Header() {
                       : "text-gray-300 hover:text-white hover:bg-blue-900 hover:border-2 hover:border-yellow-600"
                   }`}
                 >
-                  <img src={flags[lng]} alt={`${lng} flag`} className="w-5 h-5 rounded-sm object-cover" />
+                  <Image
+                    src={flags[lng]} // Pastikan flags[lng] adalah URL yang valid
+                    alt={`${lng} flag`}
+                    width={20} // Sesuaikan ukuran gambar
+                    height={20} // Sesuaikan ukuran gambar
+                    className="rounded-sm object-cover"
+                  />
                   <span>{lng.toUpperCase()}</span>
                 </Link>
               ))}
@@ -286,12 +293,18 @@ export default function Header() {
                     key={lng}
                     href={asPath}
                     locale={lng}
-                    onClick={() => setMenuOpen(false)}
+                    onClick={() => setMenuOpen(false)} // Menutup menu setelah memilih bahasa
                     className={`flex items-center space-x-2 px-4 py-2 rounded-full text-sm transition ${
                       router.locale === lng ? "bg-blue-600 text-white" : "text-gray-300 hover:text-white hover:bg-gray-700"
                     }`}
                   >
-                    <img src={flags[lng]} alt={`${lng} flag`} className="w-5 h-5 rounded-sm object-cover" />
+                    <Image
+                      src={flags[lng]} // Pastikan flags[lng] berisi URL gambar bendera yang valid
+                      alt={`${lng} flag`}
+                      width={20} // Ukuran gambar (dalam px)
+                      height={20} // Ukuran gambar (dalam px)
+                      className="rounded-sm object-cover"
+                    />
                     <span>{lng.toUpperCase()}</span>
                   </Link>
                 ))}

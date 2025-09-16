@@ -27,7 +27,13 @@ export default function Home() {
             <p className="mt-4 text-gray-400 text-justify mb-2">{t.desc_home}</p>
           </div>
           <div>
-            <img src="/assets/Gambar_Home_Kanan.png" alt="Logo" className="w-full h-auto rounded-md" />
+            <Image
+              src="/assets/Gambar_Home_Kanan.png"
+              alt="Logo"
+              width={500} // Sesuaikan ukuran lebar gambar sesuai kebutuhan
+              height={300} // Sesuaikan ukuran tinggi gambar sesuai kebutuhan
+              className="rounded-md" // Menggunakan kelas Tailwind untuk border radius
+            />
           </div>
         </div>
         <Link href="/portfolio">

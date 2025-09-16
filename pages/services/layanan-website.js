@@ -1,8 +1,10 @@
+import Link from "next/link";
 import Layout from "../../components/Layout";
 import SEO from "../../components/SEO";
 import { useRouter } from "next/router";
 import en from "../../locales/en/common.json";
 import id from "../../locales/id/common.json";
+import Image from "next/image";
 
 export default function Services() {
   const { locale } = useRouter();
@@ -68,10 +70,13 @@ export default function Services() {
                   </li>
                 </ul>
               </div>
+
               <div>
-                <img
+                <Image
                   src="/assets/layanan_website.png"
                   alt={t.services_website_image_alt || "Ilustrasi Pembuatan Website"}
+                  width={500} // Sesuaikan ukuran lebar gambar sesuai kebutuhan
+                  height={300} // Sesuaikan ukuran tinggi gambar sesuai kebutuhan
                   className="rounded-lg shadow-xl w-full"
                 />
               </div>
@@ -121,12 +126,13 @@ export default function Services() {
               <p className="mt-4">
                 {t.services_website_cta_desc || "Hubungi kami sekarang untuk mendapatkan konsultasi dan penawaran gratis."}
               </p>
-              <a
+
+              <Link
                 href="/contact"
                 className="mt-6 inline-block bg-yellow-500 text-white font-semibold px-6 py-3 rounded-lg hover:bg-yellow-600 transition duration-300"
               >
                 {t.services_website_cta_button || "Hubungi Kami Sekarang"}
-              </a>
+              </Link>
             </div>
           </div>
         </section>

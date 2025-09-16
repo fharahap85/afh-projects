@@ -3,6 +3,8 @@ import SEO from "../../components/SEO";
 import { useRouter } from "next/router";
 import en from "../../locales/en/common.json";
 import id from "../../locales/id/common.json";
+import Image from "next/image";
+import Link from "next/link";
 
 export default function Services() {
   const { locale } = useRouter();
@@ -70,10 +72,13 @@ export default function Services() {
                   </li>
                 </ul>
               </div>
+
               <div>
-                <img
+                <Image
                   src="/assets/konsultasi_it.png"
                   alt={t.services_consulting_image_alt || "Ilustrasi Konsultasi IT"}
+                  width={500} // Sesuaikan ukuran lebar gambar sesuai kebutuhan
+                  height={300} // Sesuaikan ukuran tinggi gambar sesuai kebutuhan
                   className="rounded-lg shadow-xl w-full"
                 />
               </div>
@@ -122,12 +127,13 @@ export default function Services() {
                 {t.services_consulting_cta_title || "Siap Mengoptimalkan Strategi Teknologi Anda?"}
               </h2>
               <p className="mt-4">{t.services_consulting_cta_desc || "Hubungi kami untuk konsultasi gratis."}</p>
-              <a
+
+              <Link
                 href="/contact"
                 className="mt-6 inline-block bg-yellow-500 text-white font-semibold px-6 py-3 rounded-lg hover:bg-yellow-600 transition duration-300"
               >
                 {t.services_consulting_cta_button || "Hubungi Kami Sekarang"}
-              </a>
+              </Link>
             </div>
           </div>
         </section>
