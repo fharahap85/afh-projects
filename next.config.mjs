@@ -4,7 +4,10 @@ const nextConfig = {
   i18n: {
     locales: ["en", "id"],
     defaultLocale: "id",
-    localeDetection: false, // tambahkan ini
+    localeDetection: false, 
+  },
+  images: {
+    domains: ['flagcdn.com'],
   },
 };
 
