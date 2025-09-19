@@ -12,7 +12,7 @@ export default function Home() {
 
   return (
     <Layout>
-      <div className="bg-gray-200 text-white max-w-screen flex flex-col py-5 md:px-14 sm:px-14 sm:p-8 text-center">
+      <div className="bg-gray-200 text-white min-h-screen flex flex-col py-5 md:px-14 sm:px-14 sm:p-8 text-center">
         {/* <!-- Container Background --> */}
         <div class="absolute inset-0 z-0 pointer-events-none">
           {/* <!-- Generate multiple squares --> */}
