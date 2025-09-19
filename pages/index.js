@@ -12,10 +12,22 @@ export default function Home() {
 
   return (
     <Layout>
-      <div className="bg-pattern text-white max-w-screen flex flex-col py-5 md:px-14 sm:px-14 sm:p-8 text-center">
+      <div className="bg-gray-200 text-white max-w-screen flex flex-col py-5 md:px-14 sm:px-14 sm:p-8 text-center">
+        {/* <!-- Container Background --> */}
+        <div class="absolute inset-0 z-0 pointer-events-none">
+          {/* <!-- Generate multiple squares --> */}
+          <div class="absolute w-20 h-20 bg-blue-500 opacity-60 animate-float-up-slow left-[10%] delay-[0s]"></div>
+          <div class="absolute w-8 h-8 bg-yellow-500 opacity-60 animate-float-up-slow left-[11%] delay-[0s]"></div>
+          <div class="absolute w-4 h-4 bg-yellow-400 opacity-60 animate-float-up left-[30%] delay-[2s]"></div>
+          <div class="absolute w-10 h-10 bg-pink-500 opacity-60 animate-float-up left-[50%] delay-[4s]"></div>
+          <div class="absolute w-6 h-6 bg-green-400 opacity-60 animate-float-up-fast left-[70%] delay-[1s]"></div>
+          <div class="absolute w-5 h-5 bg-red-500 opacity-60 animate-float-up left-[90%] delay-[3s]"></div>
+          {/* <!-- Tambahkan lebih banyak untuk variasi --> */}
+        </div>
+
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 p-10 sm:px-20 items-center sm:text-right">
           <div>
-            <p className="text-white font-bold text-2xl md:text-4xl sm:text-4xl leading-snug ">
+            <p className="text-blue-900 font-bold text-2xl md:text-4xl sm:text-4xl leading-snug ">
               {t.title_home.split("").map((char, index) => (
                 <span key={index} className="inline-block opacity-0 animate-fadeInUp" style={{ animationDelay: `${index * 50}ms` }}>
                   {char === " " ? "\u00A0" : char}
@@ -23,8 +35,8 @@ export default function Home() {
               ))}
             </p>
 
-            <p className="text-white text-xl text-center sm:text-right md:text-right mb-2 animate-fadeInUp">{t.tag_line}</p>
-            <p className="mt-4 text-gray-400 text-justify mb-2">{t.desc_home}</p>
+            <p className="text-blue-900 text-xl text-center sm:text-right md:text-right mb-2 animate-fadeInUp">{t.tag_line}</p>
+            <p className="mt-4 text-gray-700 text-justify mb-2">{t.desc_home}</p>
           </div>
           <div>
             <Image

@@ -63,7 +63,7 @@ export default function Header() {
               <li className="relative" ref={dropdownRef}>
                 <button
                   onClick={() => setServicesOpen(!servicesOpen)}
-                  className={`flex items-center space-x-1 hover:text-blue-600 focus:outline-none ${
+                  className={`flex items-center space-x-1 hover:text-yellow-500 focus:outline-none ${
                     isActive("/services") ? "border-b border-gray-200 text-yellow-500" : ""
                   }`}
                 >
@@ -81,7 +81,7 @@ export default function Header() {
 
                 {servicesOpen && (
                   <ul className="absolute left-0 mt-2 w-64 bg-white text-gray-900 rounded-lg shadow-lg z-50">
-                    <li className="px-4 py-3 hover:bg-gray-100 text-md">
+                    <li className="px-4 py-3 hover:bg-yellow-500 text-md">
                       <Link href="/services/layanan-website">
                         🌐 Pembuatan Website
                         <p className="text-xs text-gray-500">
@@ -89,25 +89,25 @@ export default function Header() {
                         </p>
                       </Link>
                     </li>
-                    <li className="px-4 py-3 hover:bg-gray-100 text-md">
+                    <li className="px-4 py-3 hover:bg-yellow-500 text-md">
                       <Link href="/services/layanan-aplikasi">
                         📱 Aplikasi Mobile
                         <p className="text-xs text-gray-500">Pengembangan aplikasi Android dan iOS dengan performa tinggi.</p>
                       </Link>
                     </li>
-                    <li className="px-4 py-3 hover:bg-gray-100 text-md">
+                    <li className="px-4 py-3 hover:bg-yellow-500 text-md">
                       <Link href="/services/layanan-konsultasi">
                         🧠 Konsultasi IT
                         <p className="text-xs text-gray-500">Sesi konsultasi untuk solusi teknologi dan strategi digital.</p>
                       </Link>
                     </li>
-                    <li className="px-4 py-3 hover:bg-gray-100 text-md">
+                    <li className="px-4 py-3 hover:bg-yellow-500 text-md">
                       <Link href="/services/layanan-backend">
                         ⚙️ Backend & API
                         <p className="text-xs text-gray-500">Backend yang scalable, aman, dan cepat dengan integrasi API modern.</p>
                       </Link>
                     </li>
-                    <li className="px-4 py-3 hover:bg-gray-100 text-md">
+                    <li className="px-4 py-3 hover:bg-yellow-500 text-md">
                       <Link href="/services/layanan-uiux">
                         🎨 UI/UX Design
                         <p className="text-xs text-gray-500">Desain antarmuka dan pengalaman pengguna yang menarik dan intuitif.</p>
