@@ -188,7 +188,25 @@
   "why_agile_alt": "Agile development",
   "about_cta_title": "Partner with Us",
   "about_cta_text": "Ready to bring your ideas to life? Join forces with AFH Projects to create innovative and reliable digital solutions.",
-  "cta_image_alt": "City skyline"
+  "cta_image_alt": "City skyline",
 
+  "portfolio_description": "Explore our portfolio of innovative and reliable digital solutions crafted for business success.",
+  "portfolio_hero_title": "Our Work, Your Success",
+  "portfolio_hero_text": "Discover how AFH Projects transforms ideas into reality with our portfolio of innovative digital solutions.",
+  "portfolio_hero_image_alt": "Digital dashboard",
+  "portfolio_title": "Our Portfolio",
+  "portfolio_project1_title": "E-Commerce Platform",
+  "portfolio_project1_description": "A scalable online store with seamless user experience and secure payment integration.",
+  "portfolio_project1_alt": "E-commerce website mockup",
+  "portfolio_project2_title": "Mobile Banking App",
+  "portfolio_project2_description": "A user-friendly mobile app for secure and efficient financial transactions.",
+  "portfolio_project2_alt": "Mobile banking app mockup",
+  "portfolio_project3_title": "Corporate Website",
+  "portfolio_project3_description": "A modern, responsive website designed to enhance corporate branding.",
+  "portfolio_project3_alt": "Corporate website mockup",
+  "portfolio_learn_more": "Learn More",
+  "portfolio_cta_title": "Ready to Build Your Solution?",
+  "portfolio_cta_text": "Let’s create something extraordinary together. Contact us to bring your vision to life.",
+  "portfolio_cta_image_alt": "City skyline"
 
 }
