@@ -4,6 +4,7 @@ import Image from "next/image";
 import { useRouter } from "next/router";
 import en from "../locales/en/common.json";
 import id from "../locales/id/common.json";
+import Link from "next/link";
 
 export default function Portfolio() {
   const { locale } = useRouter();
@@ -63,9 +64,9 @@ export default function Portfolio() {
                 <div className="p-6">
                   <h3 className="text-lg sm:text-xl font-semibold mb-2 text-indigo-600">{project.title}</h3>
                   <p className="text-sm sm:text-base text-gray-600">{project.description}</p>
-                  <a href="#" className="mt-4 inline-block text-indigo-600 font-semibold hover:text-indigo-800 transition duration-300">
+                  <Link href="#" className="mt-4 inline-block text-indigo-600 font-semibold hover:text-indigo-800 transition duration-300">
                     {t.portfolio_learn_more}
-                  </a>
+                  </Link>
                 </div>
               </div>
             ))}
@@ -81,12 +82,12 @@ export default function Portfolio() {
         <div className="container mx-auto px-4 sm:px-8 text-center relative z-10">
           <h2 className="text-2xl sm:text-3xl font-bold mb-4">{t.portfolio_cta_title}</h2>
           <p className="text-base sm:text-lg mb-6 max-w-2xl mx-auto">{t.portfolio_cta_text}</p>
-          <a
+          <Link
             href="/contact"
             className="bg-white text-indigo-800 py-2 px-6 rounded-full font-semibold hover:bg-gray-200 transition duration-300"
           >
             {t.nav_contact}
-          </a>
+          </Link>
         </div>
       </section>
     </Layout>
