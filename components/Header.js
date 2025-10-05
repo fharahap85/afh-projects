@@ -82,7 +82,7 @@ export default function Header() {
                 {servicesOpen && (
                   <ul className="absolute left-0 mt-2 w-64 bg-white text-gray-900 rounded-lg shadow-lg z-50">
                     <li className="px-4 py-3 hover:bg-yellow-500 text-md">
-                      <Link href="/services/layanan-website">
+                      <Link href="/services/website-development">
                         🌐 Pembuatan Website
                         <p className="text-xs text-gray-500">
                           Kami membangun website profesional dan responsif sesuai kebutuhan bisnis Anda.
@@ -90,25 +90,25 @@ export default function Header() {
                       </Link>
                     </li>
                     <li className="px-4 py-3 hover:bg-yellow-500 text-md">
-                      <Link href="/services/layanan-aplikasi">
+                      <Link href="/services/mobile-aplication">
                         📱 Aplikasi Mobile
                         <p className="text-xs text-gray-500">Pengembangan aplikasi Android dan iOS dengan performa tinggi.</p>
                       </Link>
                     </li>
                     <li className="px-4 py-3 hover:bg-yellow-500 text-md">
-                      <Link href="/services/layanan-konsultasi">
+                      <Link href="/services/it-consulting">
                         🧠 Konsultasi IT
                         <p className="text-xs text-gray-500">Sesi konsultasi untuk solusi teknologi dan strategi digital.</p>
                       </Link>
                     </li>
                     <li className="px-4 py-3 hover:bg-yellow-500 text-md">
-                      <Link href="/services/layanan-backend">
+                      <Link href="/services/backend-api-development">
                         ⚙️ Backend & API
                         <p className="text-xs text-gray-500">Backend yang scalable, aman, dan cepat dengan integrasi API modern.</p>
                       </Link>
                     </li>
                     <li className="px-4 py-3 hover:bg-yellow-500 text-md">
-                      <Link href="/services/layanan-uiux">
+                      <Link href="/services/uiux-design">
                         🎨 UI/UX Design
                         <p className="text-xs text-gray-500">Desain antarmuka dan pengalaman pengguna yang menarik dan intuitif.</p>
                       </Link>
