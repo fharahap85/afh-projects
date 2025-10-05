@@ -6,6 +6,7 @@
   "nav_portfolio": "Portofolio",
   "title_home": "AFH Projects",
   "tag_line" : "Menciptakan Solusi Web & Mobile yang Modern",
+  "view_more" : "Selengkapnya",
   "desc_home": "Kami membantu perusahaan merancang, membangun, dan mengembangkan solusi digital — mulai dari aplikasi mobile, sistem backend, hingga dashboard operasional yang mendukung pertumbuhan bisnis jangka panjang. Dengan pengalaman bertahun-tahun, AFH Projects telah dipercaya berbagai sektor industri seperti keuangan, transportasi, gaya hidup, edukasi, manufaktur, dan layanan publik.",
   "our_portfolio" : "Portfolio Kami",
   "our_services" : "Pelayanan Kami",
@@ -13,27 +14,32 @@
     {
       "icon": "🔧",
       "title": "Pembuatan Website",
-      "description": "Kami membangun website profesional dan responsif sesuai kebutuhan bisnis Anda."
+      "description": "Kami membangun website profesional dan responsif sesuai kebutuhan bisnis Anda.",
+      "link" : "/services/website-development"
     },
     {
       "icon": "📱",
       "title": "Aplikasi Mobile",
-      "description": "Pengembangan aplikasi mobile Android dan iOS dengan performa tinggi."
+      "description": "Pengembangan aplikasi mobile Android dan iOS dengan performa tinggi.",
+      "link" : "/services/mobile-application"
     },
     {
       "icon": "🧠",
       "title": "Konsultasi IT",
-      "description": "Sesi konsultasi untuk solusi teknologi, arsitektur sistem, dan strategi digital."
+      "description": "Sesi konsultasi untuk solusi teknologi, arsitektur sistem, dan strategi digital.",
+      "link" : "/services/it-consulting"
     },
     {
       "icon": "⚙️",
       "title": "Backend & API Development",
-      "description": "Pembuatan backend yang scalable, aman, dan cepat dengan integrasi API modern."
+      "description": "Pembuatan backend yang scalable, aman, dan cepat dengan integrasi API modern.",
+      "link" : "/services/backend-api-development"
     },
     {
       "icon": "🎨",
       "title": "UI/UX Design",
-      "description": "Desain antarmuka yang menarik dan pengalaman pengguna yang optimal."
+      "description": "Desain antarmuka yang menarik dan pengalaman pengguna yang optimal.",
+      "link" : "/services/uiux-design"
     }
   ],
 
@@ -207,6 +213,307 @@
   "portfolio_learn_more": "Pelajari Lebih Lanjut",
   "portfolio_cta_title": "Siap Membangun Solusi Anda?",
   "portfolio_cta_text": "Mari ciptakan sesuatu yang luar biasa bersama. Hubungi kami untuk mewujudkan visi Anda.",
-  "portfolio_cta_image_alt": "Pemandangan kota"
+  "portfolio_cta_image_alt": "Pemandangan kota",
 
+  "portfolio_view_more": "Portofolio Selengkapnya",
+
+  "terms_title": "Syarat dan Ketentuan | AFH Projects",
+  "terms_description": "Baca Syarat dan Ketentuan untuk menggunakan situs web dan layanan AFH Projects.",
+  "terms_hero_title": "Syarat dan Ketentuan",
+  "terms_hero_text": "Harap baca syarat dan ketentuan ini dengan cermat sebelum menggunakan layanan kami.",
+  "terms_and_conditions": {
+    "intro": "Harap baca syarat dan ketentuan ini dengan cermat sebelum menggunakan Layanan Kami.",
+    "interpretation_and_definitions": {
+      "title": "Interpretasi dan Definisi",
+      "interpretation": "Kata-kata yang huruf awalnya ditulis dengan huruf kapital memiliki makna yang didefinisikan di bawah kondisi berikut. Definisi berikut memiliki makna yang sama baik dalam bentuk tunggal maupun jamak.",
+      "definitions": {
+        "affiliate": "Afiliasi berarti entitas yang mengendalikan, dikendalikan oleh, atau berada di bawah kendali bersama dengan suatu pihak, di mana 'kendali' berarti kepemilikan 50% atau lebih dari saham, kepentingan ekuitas, atau sekuritas lain yang berhak memilih direktur atau otoritas pengelola lainnya.",
+        "country": "Negara merujuk pada: Indonesia",
+        "company": "Perusahaan (disebut sebagai 'Perusahaan', 'Kami', 'Kita', atau 'Kami' dalam Perjanjian ini) merujuk pada AFH Projects, Jl. Sekolah Gang Ikhlas, Pekanbaru, Riau.",
+        "device": "Perangkat berarti setiap perangkat yang dapat mengakses Layanan seperti komputer, ponsel, atau tablet digital.",
+        "service": "Layanan merujuk pada Situs Web.",
+        "terms": "Syarat dan Ketentuan (juga disebut sebagai 'Syarat') berarti Syarat dan Ketentuan ini yang membentuk keseluruhan perjanjian antara Anda dan Perusahaan mengenai penggunaan Layanan.",
+        "third_party_social_media": "Layanan Media Sosial Pihak Ketiga berarti setiap layanan atau konten (termasuk data, informasi, produk, atau layanan) yang disediakan oleh pihak ketiga yang dapat ditampilkan, disertakan, atau tersedia melalui Layanan.",
+        "website": "Situs Web merujuk pada AFH Projects, dapat diakses dari afhprojects.web.id",
+        "you": "Anda berarti individu yang mengakses atau menggunakan Layanan, atau perusahaan, atau entitas hukum lain atas nama individu tersebut yang mengakses atau menggunakan Layanan, sebagaimana berlaku."
+      }
+    },
+    "acknowledgment": {
+      "title": "Pengakuan",
+      "content": "Ini adalah Syarat dan Ketentuan yang mengatur penggunaan Layanan ini dan perjanjian yang berlaku antara Anda dan Perusahaan. Syarat dan Ketentuan ini menetapkan hak dan kewajiban semua pengguna terkait penggunaan Layanan. Dengan mengakses atau menggunakan Layanan, Anda setuju untuk terikat oleh Syarat dan Ketentuan ini. Jika Anda tidak setuju dengan bagian mana pun dari Syarat dan Ketentuan ini, maka Anda tidak boleh mengakses Layanan. Anda menyatakan bahwa Anda berusia di atas 18 tahun. Perusahaan tidak mengizinkan mereka yang berusia di bawah 18 tahun untuk menggunakan Layanan."
+    },
+    "links_to_other_websites": {
+      "title": "Tautan ke Situs Web Lain",
+      "content": "Layanan Kami mungkin berisi tautan ke situs web atau layanan pihak ketiga yang tidak dimiliki atau dikendalikan oleh Perusahaan. Perusahaan tidak memiliki kendali atas, dan tidak bertanggung jawab atas, konten, kebijakan privasi, atau praktik situs web atau layanan pihak ketiga."
+    },
+    "termination": {
+      "title": "Pengakhiran",
+      "content": "Kami dapat mengakhiri atau menangguhkan akses Anda segera, tanpa pemberitahuan atau tanggung jawab sebelumnya, untuk alasan apa pun, termasuk tanpa batasan jika Anda melanggar Syarat dan Ketentuan ini."
+    },
+    "limitation_of_liability": {
+      "title": "Batasan Tanggung Jawab",
+      "content": "Sejauh diizinkan oleh hukum yang berlaku, dalam keadaan apa pun Perusahaan atau pemasoknya tidak bertanggung jawab atas kerusakan khusus, insidental, tidak langsung, atau konsekuensial apa pun."
+    },
+    "as_is_disclaimer": {
+      "title": "Penafian 'SEBAGAIMANA ADANYA' dan 'SEBAGAIMANA TERSEDIA'",
+      "content": "Layanan disediakan untuk Anda 'SEBAGAIMANA ADANYA' dan 'SEBAGAIMANA TERSEDIA' dengan segala kesalahan dan cacat tanpa jaminan apa pun."
+    },
+    "governing_law": {
+      "title": "Hukum yang Berlaku",
+      "content": "Hukum Negara, tidak termasuk aturan konflik hukum, akan mengatur Syarat ini dan penggunaan Layanan oleh Anda."
+    },
+    "disputes_resolution": {
+      "title": "Penyelesaian Sengketa",
+      "content": "Jika Anda memiliki kekhawatiran atau sengketa tentang Layanan, Anda setuju untuk terlebih dahulu mencoba menyelesaikan sengketa secara informal dengan menghubungi Perusahaan."
+    },
+    "eu_users": {
+      "title": "Untuk Pengguna Uni Eropa (UE)",
+      "content": "Jika Anda adalah konsumen Uni Eropa, Anda akan mendapatkan manfaat dari ketentuan wajib hukum negara tempat Anda tinggal."
+    },
+    "us_legal_compliance": {
+      "title": "Kepatuhan Hukum Amerika Serikat",
+      "content": "Anda menyatakan dan menjamin bahwa (i) Anda tidak berada di negara yang dikenai embargo pemerintah Amerika Serikat, atau yang telah ditetapkan oleh pemerintah Amerika Serikat sebagai negara 'pendukung teroris', dan (ii) Anda tidak terdaftar dalam daftar pihak yang dilarang atau dibatasi oleh pemerintah Amerika Serikat."
+    },
+    "severability_and_waiver": {
+      "title": "Pemisahan dan Pengabaian",
+      "severability": "Jika ada ketentuan dari Syarat ini dianggap tidak dapat dilaksanakan atau tidak valid, ketentuan tersebut akan diubah dan ditafsirkan untuk mencapai tujuan ketentuan tersebut sejauh mungkin berdasarkan hukum yang berlaku dan ketentuan lainnya akan tetap berlaku sepenuhnya.",
+      "waiver": "Kecuali sebagaimana diatur di sini, kegagalan untuk melaksanakan hak atau meminta pelaksanaan kewajiban berdasarkan Syarat ini tidak akan memengaruhi kemampuan pihak untuk melaksanakan hak tersebut atau meminta pelaksanaan tersebut setiap saat setelahnya, juga tidak akan dianggap sebagai pengabaian pelanggaran berikutnya."
+    },
+    "translation_interpretation": {
+      "title": "Interpretasi Terjemahan",
+      "content": "Syarat dan Ketentuan ini mungkin telah diterjemahkan jika Kami telah menyediakannya untuk Anda di Layanan Kami. Anda setuju bahwa teks asli dalam bahasa Inggris akan berlaku jika terjadi sengketa."
+    },
+    "changes_to_terms": {
+      "title": "Perubahan pada Syarat dan Ketentuan Ini",
+      "content": "Kami berhak, atas kebijakan Kami sendiri, untuk mengubah atau mengganti Syarat ini kapan saja."
+    },
+    "contact_us": {
+      "title": "Hubungi Kami",
+      "content": "Jika Anda memiliki pertanyaan tentang Syarat dan Ketentuan ini, Anda dapat menghubungi kami:",
+      "phone": "Melalui telepon: 089528842802"
+    }
+  },
+  "privacy_title": "Kebijakan Privasi | AFH Projects",
+  "privacy_description": "Baca Kebijakan Privasi AFH Projects untuk memahami bagaimana kami mengumpulkan, menggunakan, dan melindungi informasi pribadi Anda.",
+  "privacy_hero_title": "Kebijakan Privasi",
+  "privacy_hero_text": "Pelajari bagaimana kami mengumpulkan, menggunakan, dan melindungi informasi pribadi Anda saat Anda menggunakan layanan kami.",
+  "privacy_policy": {
+    "intro": "Kebijakan Privasi ini menjelaskan kebijakan dan prosedur Kami mengenai pengumpulan, penggunaan, dan pengungkapan informasi Anda saat Anda menggunakan Layanan serta memberi tahu Anda tentang hak privasi Anda dan bagaimana hukum melindungi Anda. Dengan menggunakan Layanan, Anda setuju dengan pengumpulan dan penggunaan informasi sesuai dengan Kebijakan Privasi ini.",
+    "interpretation_and_definitions": {
+      "title": "Interpretasi dan Definisi",
+      "interpretation": "Kata-kata yang huruf awalnya ditulis dengan huruf kapital memiliki makna yang didefinisikan di bawah kondisi berikut. Definisi berikut memiliki makna yang sama baik dalam bentuk tunggal maupun jamak.",
+      "definitions": {
+        "account": "Akun berarti akun unik yang dibuat untuk Anda guna mengakses Layanan kami atau bagian dari Layanan kami.",
+        "affiliate": "Afiliasi berarti entitas yang mengendalikan, dikendalikan oleh, atau berada di bawah kendali bersama dengan suatu pihak, di mana 'kendali' berarti kepemilikan 50% atau lebih dari saham, kepentingan ekuitas, atau sekuritas lain yang berhak memilih direktur atau otoritas pengelola lainnya.",
+        "company": "Perusahaan (disebut sebagai 'Perusahaan', 'Kami', 'Kita', atau 'Kami' dalam Perjanjian ini) merujuk pada AFH Projects, Jl. Sekolah Gang Ikhlas, Pekanbaru, Riau.",
+        "cookies": "Cookies adalah file kecil yang ditempatkan di komputer, perangkat seluler, atau perangkat lain oleh situs web, berisi detail riwayat penelusuran Anda di situs web tersebut di antara banyak kegunaannya.",
+        "country": "Negara merujuk pada: Indonesia",
+        "device": "Perangkat berarti setiap perangkat yang dapat mengakses Layanan seperti komputer, ponsel, atau tablet digital.",
+        "personal_data": "Data Pribadi adalah setiap informasi yang berkaitan dengan individu yang diidentifikasi atau dapat diidentifikasi.",
+        "service": "Layanan merujuk pada Situs Web.",
+        "service_provider": "Penyedia Layanan berarti setiap orang alami atau hukum yang memproses data atas nama Perusahaan.",
+        "usage_data": "Data Penggunaan merujuk pada data yang dikumpulkan secara otomatis, baik yang dihasilkan oleh penggunaan Layanan atau dari infrastruktur Layanan itu sendiri (misalnya, durasi kunjungan halaman).",
+        "website": "Situs Web merujuk pada AFH Projects, dapat diakses dari afhprojects.web.id",
+        "you": "Anda berarti individu yang mengakses atau menggunakan Layanan, atau perusahaan, atau entitas hukum lain atas nama individu tersebut yang mengakses atau menggunakan Layanan, sebagaimana berlaku."
+      }
+    },
+    "collecting_and_using_personal_data": {
+      "title": "Pengumpulan dan Penggunaan Data Pribadi Anda",
+      "types_of_data_collected": {
+        "title": "Jenis Data yang Dikumpulkan",
+        "personal_data": {
+          "title": "Data Pribadi",
+          "content": "Saat menggunakan Layanan Kami, Kami dapat meminta Anda untuk memberikan Kami informasi yang dapat diidentifikasi secara pribadi yang dapat digunakan untuk menghubungi atau mengidentifikasi Anda."
+        },
+        "usage_data": {
+          "title": "Data Penggunaan",
+          "content": "Data Penggunaan dikumpulkan secara otomatis saat menggunakan Layanan. Data Penggunaan dapat mencakup informasi seperti alamat Protokol Internet Perangkat Anda (misalnya alamat IP), jenis peramban, versi peramban, halaman Layanan kami yang Anda kunjungi, waktu dan tanggal kunjungan Anda, waktu yang dihabiskan di halaman tersebut, pengenal perangkat unik, dan data diagnostik lainnya."
+        }
+      },
+      "tracking_technologies_and_cookies": {
+        "title": "Teknologi Pelacakan dan Cookies",
+        "content": "Kami menggunakan Cookies dan teknologi pelacakan serupa untuk melacak aktivitas di Layanan Kami dan menyimpan informasi tertentu. Teknologi yang Kami gunakan dapat mencakup: Cookies atau Cookies Peramban, Web Beacons.",
+        "cookies_types": {
+          "necessary": {
+            "title": "Cookies Penting / Esensial",
+            "type": "Cookies Sesi",
+            "administered_by": "Kami",
+            "purpose": "Cookies ini penting untuk menyediakan Anda layanan yang tersedia melalui Situs Web dan memungkinkan Anda menggunakan beberapa fiturnya."
+          },
+          "policy_acceptance": {
+            "title": "Cookies Penerimaan Kebijakan / Pemberitahuan",
+            "type": "Cookies Persisten",
+            "administered_by": "Kami",
+            "purpose": "Cookies ini mengidentifikasi apakah pengguna telah menerima penggunaan cookies di Situs Web."
+          },
+          "functionality": {
+            "title": "Cookies Fungsionalitas",
+            "type": "Cookies Persisten",
+            "administered_by": "Kami",
+            "purpose": "Cookies ini memungkinkan kami untuk mengingat pilihan yang Anda buat saat menggunakan Situs Web, seperti mengingat detail login atau preferensi bahasa Anda."
+          }
+        }
+      }
+    },
+    "use_of_personal_data": {
+      "title": "Penggunaan Data Pribadi Anda",
+      "content": "Perusahaan dapat menggunakan Data Pribadi untuk tujuan berikut: Untuk menyediakan dan memelihara Layanan kami, untuk mengelola Akun Anda, untuk pelaksanaan kontrak, untuk menghubungi Anda, untuk memberikan Anda berita dan penawaran khusus, untuk mengelola permintaan Anda, untuk transfer bisnis, untuk tujuan lain seperti analisis data."
+    },
+    "sharing_personal_data": {
+      "title": "Berbagi Data Pribadi Anda",
+      "content": "Kami dapat berbagi informasi pribadi Anda dengan Penyedia Layanan, untuk transfer bisnis, dengan Afiliasi, dengan mitra bisnis, dengan pengguna lain, atau dengan persetujuan Anda."
+    },
+    "retention_of_personal_data": {
+      "title": "Penyimpanan Data Pribadi Anda",
+      "content": "Perusahaan akan menyimpan Data Pribadi Anda hanya selama diperlukan untuk tujuan yang ditetapkan dalam Kebijakan Privasi ini."
+    },
+    "transfer_of_personal_data": {
+      "title": "Transfer Data Pribadi Anda",
+      "content": "Informasi Anda, termasuk Data Pribadi, diproses di kantor operasional Perusahaan dan di tempat lain di mana pihak-pihak yang terlibat dalam pemrosesan berada."
+    },
+    "delete_personal_data": {
+      "title": "Hapus Data Pribadi Anda",
+      "content": "Anda berhak untuk menghapus atau meminta Kami membantu menghapus Data Pribadi yang telah Kami kumpulkan tentang Anda."
+    },
+    "disclosure_of_personal_data": {
+      "title": "Pengungkapan Data Pribadi Anda",
+      "business_transactions": {
+        "title": "Transaksi Bisnis",
+        "content": "Jika Perusahaan terlibat dalam penggabungan, akuisisi, atau penjualan aset, Data Pribadi Anda dapat ditransfer."
+      },
+      "law_enforcement": {
+        "title": "Penegakan Hukum",
+        "content": "Dalam keadaan tertentu, Perusahaan mungkin diharuskan untuk mengungkapkan Data Pribadi Anda jika diwajibkan oleh hukum."
+      },
+      "other_legal_requirements": {
+        "title": "Persyaratan Hukum Lainnya",
+        "content": "Perusahaan dapat mengungkapkan Data Pribadi Anda dengan itikad baik bahwa tindakan tersebut diperlukan untuk: mematuhi kewajiban hukum, melindungi dan membela hak atau properti Perusahaan, mencegah atau menyelidiki kemungkinan pelanggaran, melindungi keselamatan pribadi Pengguna, atau melindungi dari tanggung jawab hukum."
+      }
+    },
+    "security_of_personal_data": {
+      "title": "Keamanan Data Pribadi Anda",
+      "content": "Keamanan Data Pribadi Anda penting bagi Kami, tetapi ingat bahwa tidak ada metode transmisi melalui Internet atau metode penyimpanan elektronik yang 100% aman."
+    },
+    "childrens_privacy": {
+      "title": "Privasi Anak",
+      "content": "Layanan Kami tidak ditujukan untuk siapa pun yang berusia di bawah 13 tahun. Kami tidak dengan sengaja mengumpulkan informasi yang dapat diidentifikasi secara pribadi dari siapa pun yang berusia di bawah 13 tahun."
+    },
+    "links_to_other_websites": {
+      "title": "Tautan ke Situs Web Lain",
+      "content": "Layanan Kami mungkin berisi tautan ke situs web lain yang tidak dioperasikan oleh Kami. Kami tidak memiliki kendali atas dan tidak bertanggung jawab atas konten, kebijakan privasi, atau praktik situs atau layanan pihak ketiga."
+    },
+    "changes_to_privacy_policy": {
+      "title": "Perubahan pada Kebijakan Privasi Ini",
+      "content": "Kami dapat memperbarui Kebijakan Privasi Kami dari waktu ke waktu. Kami akan memberi tahu Anda tentang perubahan apa pun dengan memposting Kebijakan Privasi baru di halaman ini."
+    },
+    "contact_us": {
+      "title": "Hubungi Kami",
+      "content": "Jika Anda memiliki pertanyaan tentang Kebijakan Privasi ini, Anda dapat menghubungi kami:",
+      "phone": "Melalui telepon: 089528842802"
+    }
+  },
+  "cookies_title": "Kebijakan Cookies | AFH Projects",
+  "cookies_description": "Baca Kebijakan Cookies AFH Projects untuk memahami bagaimana kami menggunakan cookies dan teknologi serupa di situs web kami.",
+  "cookies_hero_title": "Kebijakan Cookies",
+  "cookies_hero_text": "Pelajari tentang cookies yang kami gunakan dan bagaimana Anda dapat mengelolanya di situs web kami.",
+  "cookies_policy": {
+    "intro": "Kebijakan Cookies ini menjelaskan apa itu Cookies dan bagaimana Kami menggunakannya. Anda harus membaca kebijakan ini agar Anda dapat memahami jenis cookies yang Kami gunakan, atau informasi yang Kami kumpulkan menggunakan Cookies dan bagaimana informasi tersebut digunakan. Untuk informasi lebih lanjut tentang bagaimana Kami menggunakan, menyimpan, dan menjaga keamanan data pribadi Anda, lihat Kebijakan Privasi kami.",
+    "interpretation_and_definitions": {
+      "title": "Interpretasi dan Definisi",
+      "interpretation": "Kata-kata yang huruf awalnya ditulis dengan huruf kapital memiliki makna yang didefinisikan di bawah kondisi berikut. Definisi berikut memiliki makna yang sama baik dalam bentuk tunggal maupun jamak.",
+      "definitions": {
+        "company": "Perusahaan (disebut sebagai 'Perusahaan', 'Kami', 'Kita', atau 'Kami' dalam Kebijakan Cookies ini) merujuk pada AFH Projects, Jl. Sekolah Gang Ikhlas, Pekanbaru, Riau.",
+        "cookies": "Cookies adalah file kecil yang ditempatkan di komputer, perangkat seluler, atau perangkat lain oleh situs web, berisi detail riwayat penelusuran Anda di situs web tersebut di antara banyak kegunaannya.",
+        "website": "Situs Web merujuk pada AFH Projects, dapat diakses dari afhprojects.web.id",
+        "you": "Anda berarti individu yang mengakses atau menggunakan Situs Web, atau perusahaan, atau entitas hukum lain atas nama individu tersebut yang mengakses atau menggunakan Situs Web, sebagaimana berlaku."
+      }
+    },
+    "type_of_cookies": {
+      "title": "Jenis Cookies yang Kami Gunakan",
+      "intro": "Cookies dapat berupa Cookies 'Persisten' atau 'Sesi'. Cookies Persisten tetap ada di komputer pribadi atau perangkat seluler Anda saat Anda offline, sedangkan Cookies Sesi dihapus segera setelah Anda menutup peramban web Anda.",
+      "cookies_types": {
+        "necessary": {
+          "title": "Cookies Penting / Esensial",
+          "type": "Cookies Sesi",
+          "administered_by": "Kami",
+          "purpose": "Cookies ini penting untuk menyediakan Anda layanan yang tersedia melalui Situs Web dan memungkinkan Anda menggunakan beberapa fiturnya. Cookies ini membantu untuk mengautentikasi pengguna dan mencegah penggunaan akun pengguna yang curang. Tanpa Cookies ini, layanan yang Anda minta tidak dapat disediakan, dan Kami hanya menggunakan Cookies ini untuk menyediakan layanan tersebut kepada Anda."
+        },
+        "functionality": {
+          "title": "Cookies Fungsionalitas",
+          "type": "Cookies Persisten",
+          "administered_by": "Kami",
+          "purpose": "Cookies ini memungkinkan kami untuk mengingat pilihan yang Anda buat saat menggunakan Situs Web, seperti mengingat detail login atau preferensi bahasa Anda. Tujuan dari Cookies ini adalah untuk memberikan pengalaman yang lebih personal kepada Anda dan untuk menghindari Anda harus memasukkan kembali preferensi Anda setiap kali Anda menggunakan Situs Web."
+        }
+      }
+    },
+    "your_choices": {
+      "title": "Pilihan Anda Mengenai Cookies",
+      "content": "Jika Anda lebih suka menghindari penggunaan Cookies di Situs Web, pertama-tama Anda harus menonaktifkan penggunaan Cookies di peramban Anda dan kemudian menghapus Cookies yang tersimpan di peramban Anda yang terkait dengan situs web ini. Anda dapat menggunakan opsi ini untuk mencegah penggunaan Cookies kapan saja. Jika Anda tidak menerima Cookies Kami, Anda mungkin mengalami beberapa ketidaknyamanan dalam penggunaan Situs Web dan beberapa fitur mungkin tidak berfungsi dengan baik.",
+      "browser_instructions": {
+        "chrome": "Untuk peramban web Chrome, silakan kunjungi halaman ini dari Google: https://support.google.com/accounts/answer/32050",
+        "internet_explorer": "Untuk peramban web Internet Explorer, silakan kunjungi halaman ini dari Microsoft: http://support.microsoft.com/kb/278835",
+        "firefox": "Untuk peramban web Firefox, silakan kunjungi halaman ini dari Mozilla: https://support.mozilla.org/en-US/kb/delete-cookies-remove-info-websites-stored",
+        "safari": "Untuk peramban web Safari, silakan kunjungi halaman ini dari Apple: https://support.apple.com/guide/safari/manage-cookies-and-website-data-sfri11471/mac",
+        "other": "Untuk peramban web lainnya, silakan kunjungi halaman web resmi peramban Anda."
+      }
+    },
+    "more_information": {
+      "title": "Informasi Lebih Lanjut tentang Cookies",
+      "content": "Anda dapat mempelajari lebih lanjut tentang cookies di sini: All About Cookies by TermsFeed."
+    },
+    "contact_us": {
+      "title": "Hubungi Kami",
+      "content": "Jika Anda memiliki pertanyaan tentang Kebijakan Cookies ini, Anda dapat menghubungi kami:",
+      "phone": "Melalui telepon: 089528842802"
+    }
+  },
+  "disclaimer_title": "Penafian | AFH Projects",
+  "disclaimer_description": "Baca Penafian AFH Projects untuk memahami batasan tanggung jawab dan sifat informasi yang disediakan di situs web kami.",
+  "disclaimer_hero_title": "Penafian",
+  "disclaimer_hero_text": "Pelajari tentang batasan tanggung jawab dan sifat informasi yang disediakan di situs web kami.",
+  "disclaimer": {
+    "interpretation_and_definitions": {
+      "title": "Interpretasi dan Definisi",
+      "interpretation": "Kata-kata yang huruf awalnya ditulis dengan huruf kapital memiliki makna yang didefinisikan di bawah kondisi berikut. Definisi berikut memiliki makna yang sama baik dalam bentuk tunggal maupun jamak.",
+      "definitions": {
+        "company": "Perusahaan (disebut sebagai 'Perusahaan', 'Kami', 'Kita', atau 'Kami' dalam Penafian ini) merujuk pada AFH Projects, Jl. Sekolah Gang Ikhlas, Pekanbaru, Riau.",
+        "service": "Layanan merujuk pada Situs Web.",
+        "you": "Anda berarti individu yang mengakses Layanan, atau perusahaan, atau entitas hukum lain atas nama individu tersebut yang mengakses atau menggunakan Layanan, sebagaimana berlaku.",
+        "website": "Situs Web merujuk pada AFH Projects, dapat diakses dari afhprojects.web.id"
+      }
+    },
+    "disclaimer": {
+      "title": "Penafian",
+      "content": "Informasi yang terdapat pada Layanan hanya untuk tujuan informasi umum. Perusahaan tidak bertanggung jawab atas kesalahan atau kelalaian dalam konten Layanan. Dalam keadaan apa pun Perusahaan tidak bertanggung jawab atas kerusakan khusus, langsung, tidak langsung, konsekuensial, atau insidental atau kerusakan apa pun, baik dalam tindakan kontrak, kelalaian, atau perbuatan melawan hukum lainnya, yang timbul dari atau sehubungan dengan penggunaan Layanan atau konten Layanan. Perusahaan berhak untuk membuat penambahan, penghapusan, atau modifikasi pada konten Layanan kapan saja tanpa pemberitahuan sebelumnya. Perusahaan tidak menjamin bahwa Layanan bebas dari virus atau komponen berbahaya lainnya."
+    },
+    "external_links_disclaimer": {
+      "title": "Penafian Tautan Eksternal",
+      "content": "Layanan mungkin berisi tautan ke situs web eksternal yang tidak disediakan atau dikelola oleh atau dengan cara apa pun berafiliasi dengan Perusahaan. Harap diperhatikan bahwa Perusahaan tidak menjamin keakuratan, relevansi, ketepatan waktu, atau kelengkapan informasi di situs web eksternal tersebut."
+    },
+    "errors_and_omissions_disclaimer": {
+      "title": "Penafian Kesalahan dan Kelalaian",
+      "content": "Informasi yang diberikan oleh Layanan hanya untuk panduan umum mengenai hal-hal yang menarik. Meskipun Perusahaan mengambil setiap tindakan pencegahan untuk memastikan bahwa konten Layanan selalu terbaru dan akurat, kesalahan dapat terjadi. Selain itu, mengingat sifat hukum, aturan, dan peraturan yang terus berubah, mungkin terdapat keterlambatan, kelalaian, atau ketidakakuratan dalam informasi yang terdapat pada Layanan. Perusahaan tidak bertanggung jawab atas kesalahan atau kelalaian, atau atas hasil yang diperoleh dari penggunaan informasi ini."
+    },
+    "fair_use_disclaimer": {
+      "title": "Penafian Penggunaan Wajar",
+      "content": "Perusahaan dapat menggunakan materi berhak cipta yang belum selalu diizinkan secara khusus oleh pemilik hak cipta. Perusahaan menyediakan materi tersebut untuk kritik, komentar, pelaporan berita, pengajaran, beasiswa, atau penelitian. Perusahaan percaya bahwa ini merupakan 'penggunaan wajar' dari materi berhak cipta tersebut sebagaimana diatur dalam bagian 107 hukum Hak Cipta Amerika Serikat. Jika Anda ingin menggunakan materi berhak cipta dari Layanan untuk tujuan Anda sendiri yang melampaui penggunaan wajar, Anda harus mendapatkan izin dari pemilik hak cipta."
+    },
+    "views_expressed_disclaimer": {
+      "title": "Penafian Pandangan yang Dinyatakan",
+      "content": "Layanan mungkin berisi pandangan dan opini yang merupakan milik penulis dan tidak selalu mencerminkan kebijakan atau posisi resmi dari penulis lain, agensi, organisasi, pemberi kerja, atau perusahaan, termasuk Perusahaan. Komentar yang dipublikasikan oleh pengguna adalah tanggung jawab mereka sendiri dan pengguna akan bertanggung jawab penuh, bertanggung jawab, dan menanggung kesalahan atas fitnah atau litigasi yang dihasilkan dari sesuatu yang ditulis dalam atau sebagai hasil langsung dari sesuatu yang ditulis dalam komentar. Perusahaan tidak bertanggung jawab atas komentar yang dipublikasikan oleh pengguna dan berhak untuk menghapus komentar apa pun untuk alasan apa pun."
+    },
+    "no_responsibility_disclaimer": {
+      "title": "Penafian Tanpa Tanggung Jawab",
+      "content": "Informasi pada Layanan disediakan dengan pemahaman bahwa Perusahaan tidak terlibat dalam memberikan saran dan layanan hukum, akuntansi, pajak, atau profesional lainnya. Dengan demikian, informasi tersebut tidak boleh digunakan sebagai pengganti konsultasi dengan penasihat akuntansi, pajak, hukum, atau profesional lainnya yang kompeten. Dalam keadaan apa pun Perusahaan atau pemasoknya tidak bertanggung jawab atas kerusakan khusus, insidental, tidak langsung, atau konsekuensial apa pun yang timbul dari atau sehubungan dengan akses atau penggunaan Anda atau ketidakmampuan untuk mengakses atau menggunakan Layanan."
+    },
+    "use_at_your_own_risk_disclaimer": {
+      "title": "Penafian 'Gunakan dengan Risiko Anda Sendiri'",
+      "content": "Semua informasi dalam Layanan disediakan 'sebagaimana adanya', tanpa jaminan kelengkapan, keakuratan, ketepatan waktu, atau hasil yang diperoleh dari penggunaan informasi ini, dan tanpa jaminan apa pun, baik tersurat maupun tersirat, termasuk, namun tidak terbatas pada jaminan kinerja, kelayakan untuk dijual, dan kesesuaian untuk tujuan tertentu. Perusahaan tidak akan bertanggung jawab kepada Anda atau siapa pun atas keputusan yang dibuat atau tindakan yang diambil berdasarkan informasi yang diberikan oleh Layanan atau atas kerusakan konsekuensial, khusus, atau serupa, bahkan jika telah diberitahu tentang kemungkinan kerusakan tersebut."
+    },
+    "contact_us": {
+      "title": "Hubungi Kami",
+      "content": "Jika Anda memiliki pertanyaan tentang Penafian ini, Anda dapat menghubungi kami:",
+      "phone": "Melalui telepon: 089528842802"
+    }
+  }
 }
