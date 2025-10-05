@@ -9,7 +9,7 @@ export default function Footer() {
   const t = locale === "id" ? id : en;
 
   return (
-    <footer className="bg-gradient-to-r from-indigo-900 via-blue-900 to-indigo-900 text-white py-12">
+    <footer className="bg-gradient-to-r from-indigo-900 via-blue-900 to-indigo-900 text-white pt-12">
       <div className="container mx-auto px-4 sm:px-8">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Brand Section */}
@@ -17,7 +17,7 @@ export default function Footer() {
             <h3 className="text-2xl font-bold mb-4">AFH Projects</h3>
             <p className="text-sm text-gray-300">{t.footer_description || "Delivering innovative solutions for a better future."}</p>
             <div className="mt-6 flex space-x-4">
-              <a
+              <Link
                 href="https://facebook.com"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -25,8 +25,8 @@ export default function Footer() {
                 aria-label="Facebook"
               >
                 <FaFacebook size={24} />
-              </a>
-              <a
+              </Link>
+              <Link
                 href="https://twitter.com"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -34,8 +34,8 @@ export default function Footer() {
                 aria-label="Twitter"
               >
                 <FaTwitter size={24} />
-              </a>
-              <a
+              </Link>
+              <Link
                 href="https://instagram.com"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -43,8 +43,8 @@ export default function Footer() {
                 aria-label="Instagram"
               >
                 <FaInstagram size={24} />
-              </a>
-              <a
+              </Link>
+              <Link
                 href="https://linkedin.com"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -52,7 +52,7 @@ export default function Footer() {
                 aria-label="LinkedIn"
               >
                 <FaLinkedin size={24} />
-              </a>
+              </Link>
             </div>
           </div>
 
@@ -116,15 +116,15 @@ export default function Footer() {
             <ul className="space-y-2 text-sm text-gray-300">
               <li>
                 Email:{" "}
-                <a href="mailto:info@afhprojects.com" className="hover:text-white transition duration-300">
+                <Link href="mailto:info@afhprojects.com" className="hover:text-white transition duration-300">
                   info@afhprojects.com
-                </a>
+                </Link>
               </li>
               <li>
                 Phone:{" "}
-                <a href="tel:+1234567890" className="hover:text-white transition duration-300">
+                <Link href="tel:+1234567890" className="hover:text-white transition duration-300">
                   +1 (234) 567-890
-                </a>
+                </Link>
               </li>
               <li>Address: 123 Innovation Street, Tech City, TC 12345</li>
             </ul>
@@ -132,11 +132,11 @@ export default function Footer() {
         </div>
 
         {/* Bottom Bar */}
-        <div className="mt-12 pt-8 border-t border-gray-700 text-center">
-          <p className="text-sm text-gray-400">
-            &copy; {new Date().getFullYear()} AFH Projects. {t.footer_rights || "All rights reserved."}
-          </p>
-        </div>
+      </div>
+      <div className="bg-white mt-7 py-8 border-t border-gray-700 text-center">
+        <p className="text-sm text-blue-900">
+          &copy; {new Date().getFullYear()} AFH Projects. {t.footer_rights || "All rights reserved."}
+        </p>
       </div>
     </footer>
   );
