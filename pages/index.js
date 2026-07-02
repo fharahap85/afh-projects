@@ -4,152 +4,307 @@ import en from "../locales/en/common.json";
 import id from "../locales/id/common.json";
 import Image from "next/image";
 import Link from "next/link";
-import Slider from "react-slick"; // Import react-slick for carousel
-import "slick-carousel/slick/slick.css"; // Import slick carousel styles
-import "slick-carousel/slick/slick-theme.css"; // Import slick theme styles
+import { motion } from "framer-motion";
+import {
+  ArrowRight,
+  Monitor,
+  Smartphone,
+  BrainCircuit,
+  Server,
+  Palette,
+  Code2,
+  Terminal,
+  Braces,
+  ChevronDown,
+} from "lucide-react";
+
+const serviceIconMap = {
+  "🔧": Monitor,
+  "📱": Smartphone,
+  "🧠": BrainCircuit,
+  "⚙️": Server,
+  "🎨": Palette,
+};
+
+const fadeUp = {
+  hidden: { opacity: 0, y: 30 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } },
+};
+
+const stagger = {
+  visible: { transition: { staggerChildren: 0.1 } },
+};
 
 export default function Home() {
   const { locale } = useRouter();
   const t = locale === "id" ? id : en;
 
-  // Portfolio items (same as provided in the original index.js)
   const projects = [
-    {
-      id: 1,
-      images: [
-        { src: "/assets/portfolio/mobile/fixitnow1.png", alt: t.portfolio_project1_alt },
-        { src: "/assets/portfolio/mobile/fixitnow2.png", alt: t.portfolio_project1_alt + " 2" },
-        { src: "/assets/portfolio/mobile/fixitnow3.png", alt: t.portfolio_project1_alt + " 3" },
-      ],
-    },
-    {
-      id: 2,
-      images: [
-        { src: "/assets/portfolio/website/eventease1.svg", alt: t.portfolio_project2_alt },
-        { src: "/assets/portfolio/website/eventease2.svg", alt: t.portfolio_project2_alt + " 2" },
-      ],
-    },
-    {
-      id: 3,
-      images: [
-        { src: "/assets/portfolio/website/innoval1.svg", alt: t.portfolio_project3_alt },
-        { src: "/assets/portfolio/website/innoval2.svg", alt: t.portfolio_project1_alt + " 2" },
-      ],
-    },
+    { id: 1, images: ["/assets/portfolio/mobile/fixitnow1.png", "/assets/portfolio/mobile/fixitnow2.png"], category: "mobile" },
+    { id: 2, images: ["/assets/portfolio/website/eventease1.svg", "/assets/portfolio/website/eventease2.svg"], category: "website" },
+    { id: 3, images: ["/assets/portfolio/website/innoval1.svg", "/assets/portfolio/website/innoval2.svg"], category: "website" },
   ];
-
-  // Slider settings for react-slick (consistent with Portfolio.js)
-  const sliderSettings = {
-    dots: true,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    autoplay: true,
-    autoplaySpeed: 3000,
-    arrows: false,
-    swipe: true,
-    pauseOnHover: true,
-  };
 
   return (
     <Layout>
       {/* Hero Section */}
-      <div className="bg-gray-200 text-white flex flex-col py-5 md:px-14 sm:px-14 sm:p-8 text-center">
-        {/* Container Background */}
-        <div className="absolute inset-0 z-0 pointer-events-none">
-          <div className="absolute w-20 h-20 bg-blue-500 opacity-60 animate-float-up-slow left-[10%] delay-[0s]"></div>
-          <div className="absolute w-8 h-8 bg-yellow-500 opacity-60 animate-float-up-slow left-[11%] delay-[0s]"></div>
-          <div className="absolute w-4 h-4 bg-yellow-400 opacity-60 animate-float-up left-[30%] delay-[2s]"></div>
-          <div className="absolute w-10 h-10 bg-pink-500 opacity-60 animate-float-up left-[50%] delay-[4s]"></div>
-          <div className="absolute w-6 h-6 bg-green-400 opacity-60 animate-float-up-fast left-[70%] delay-[1s]"></div>
-          <div className="absolute w-5 h-5 bg-red-500 opacity-60 animate-float-up left-[90%] delay-[3s]"></div>
+      <section className="relative min-h-[90vh] flex items-center overflow-hidden">
+        {/* Background gradient mesh */}
+        <div className="absolute inset-0 bg-background">
+          <div className="absolute top-1/4 -left-32 w-96 h-96 bg-accent/5 rounded-full blur-3xl" />
+          <div className="absolute bottom-1/4 right-0 w-80 h-80 bg-accent/3 rounded-full blur-3xl" />
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-accent/2 rounded-full blur-3xl" />
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 p-10 sm:px-20 items-center sm:text-right">
-          <div>
-            <p className="text-blue-900 font-bold text-2xl md:text-4xl sm:text-4xl leading-snug">
-              {t.title_home.split("").map((char, index) => (
-                <span key={index} className="inline-block opacity-0 animate-fadeInUp" style={{ animationDelay: `${index * 50}ms` }}>
-                  {char === " " ? "\u00A0" : char}
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+          <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+            {/* Left: Text */}
+            <motion.div initial="hidden" animate="visible" variants={stagger} className="space-y-6">
+              {/* Badge */}
+              <motion.div variants={fadeUp}>
+                <span className="inline-flex items-center gap-2 px-3 py-1.5 bg-accent/10 border border-accent/20 rounded-full text-xs font-mono text-accent">
+                  <span className="w-1.5 h-1.5 bg-accent rounded-full animate-pulse" />
+                  Trusted by clients across finance, transport, education
                 </span>
-              ))}
-            </p>
-            <p className="text-blue-900 text-xl text-center sm:text-right md:text-right mb-2 animate-fadeInUp">{t.tag_line}</p>
-            <p className="mt-4 text-gray-700 text-justify mb-2">{t.desc_home}</p>
-          </div>
-          <div>
-            <Image src="/assets/Gambar_Home_Kanan.png" alt="Logo" width={500} height={300} className="rounded-md" />
+              </motion.div>
+
+              {/* Headline */}
+              <motion.h1
+                variants={fadeUp}
+                className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-[1.1]"
+              >
+                <span className="text-foreground">{t.title_home}</span>
+                <br />
+                <span className="text-accent">{t.tag_line}</span>
+              </motion.h1>
+
+              {/* Description */}
+              <motion.p variants={fadeUp} className="text-muted text-lg leading-relaxed max-w-xl">
+                {t.desc_home}
+              </motion.p>
+
+              {/* CTA Buttons */}
+              <motion.div variants={fadeUp} className="flex flex-wrap gap-4 pt-2">
+                <Link
+                  href="/portfolio"
+                  className="inline-flex items-center gap-2 px-6 py-3 bg-accent text-background font-semibold rounded-lg hover:bg-accent-hover transition-all hover:shadow-[0_0_20px_rgba(45,212,191,0.3)]"
+                >
+                  {t.our_portfolio}
+                  <ArrowRight className="w-4 h-4" />
+                </Link>
+                <Link
+                  href="/contact"
+                  className="inline-flex items-center gap-2 px-6 py-3 border border-card-border text-foreground font-semibold rounded-lg hover:border-accent/50 hover:bg-accent/5 transition-all"
+                >
+                  {locale === "id" ? "Hubungi Kami" : "Contact Us"}
+                </Link>
+              </motion.div>
+            </motion.div>
+
+            {/* Right: Visual - Code Terminal Mockup */}
+            <motion.div
+              initial={{ opacity: 0, x: 40 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8, delay: 0.3, ease: "easeOut" }}
+              className="hidden lg:block"
+            >
+              <div className="relative bg-card-bg border border-card-border rounded-2xl overflow-hidden shadow-2xl">
+                {/* Terminal header */}
+                <div className="flex items-center gap-2 px-4 py-3 bg-card-border/30 border-b border-card-border">
+                  <div className="flex gap-1.5">
+                    <div className="w-3 h-3 rounded-full bg-red-500/80" />
+                    <div className="w-3 h-3 rounded-full bg-yellow-500/80" />
+                    <div className="w-3 h-3 rounded-full bg-green-500/80" />
+                  </div>
+                  <span className="text-xs font-mono text-muted ml-2">afh-projects ~ </span>
+                </div>
+                {/* Terminal content */}
+                <div className="p-6 font-mono text-sm space-y-3">
+                  <div className="flex items-center gap-2">
+                    <span className="text-accent">$</span>
+                    <span className="text-muted">npx create-afh-app my-project</span>
+                  </div>
+                  <div className="text-muted/60 text-xs">Creating a new AFH Projects app...</div>
+                  <div className="flex items-center gap-2">
+                    <span className="text-accent">$</span>
+                    <span className="text-muted">cd my-project && npm run dev</span>
+                  </div>
+                  <div className="text-green-400 text-xs">✓ Ready in 1.2s</div>
+                  <div className="text-muted/60 text-xs">  ➜ Local:   http://localhost:3000</div>
+                  <div className="text-muted/60 text-xs">  ➜ Network: http://192.168.1.1:3000</div>
+                  <div className="pt-2 border-t border-card-border/50">
+                    <div className="flex items-center gap-2">
+                      <span className="text-accent">$</span>
+                      <span className="text-muted animate-pulse">▌</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </motion.div>
           </div>
         </div>
-        <Link href="/portfolio">
-          <p className="inline-block bg-yellow-600 text-white hover:bg-blue-900 animate-bounce hover:text-white shadow-black shadow-sm font-semibold py-2 px-4 rounded transition duration-200">
-            {t.our_portfolio}
-          </p>
-        </Link>
-      </div>
+
+        {/* Scroll indicator */}
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 1.5 }}
+          className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2"
+        >
+          <span className="text-xs font-mono text-muted">scroll</span>
+          <ChevronDown className="w-4 h-4 text-accent animate-scroll-indicator" />
+        </motion.div>
+      </section>
 
       {/* Services Section */}
-      <div className="bg-pattern-gray text-center py-10 justify-center text-gray-900">
-        <div className="animate-fadeInUp">
-          <p className="text-2xl font-bold">{t.our_services}</p>
-        </div>
-        <div className="flex flex-wrap justify-center gap-6 py-10">
-          {t.services.map((service, index) => (
-            <div
-              key={index}
-              className="group bg-blue-900 text-white px-4 py-4 rounded-xl shadow border border-gray-700
-                 w-80 h-60 md:w-40 md:h-28 md:hover:w-80 md:hover:h-60 transition-all duration-500 overflow-hidden relative"
-            >
-              <div className="text-4xl mb-2">{service.icon}</div>
-              <h3 className="text-base font-semibold mb-2">{service.title}</h3>
-              <p className="text-sm text-gray-400 opacity-100 md:opacity-0 md:group-hover:opacity-100 transition-opacity duration-500">
-                {service.description}
-              </p>
-              <div className="text-center mt-8">
-                <Link
-                  href={service.link}
-                  className="inline-block bg-yellow-600 text-white hover:bg-blue-900 hover:text-white font-semibold py-2 px-6 rounded transition duration-200"
-                >
-                  {t.view_more}
-                </Link>
-              </div>
-            </div>
-          ))}
-        </div>
-      </div>
+      <section className="py-24 bg-background">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, margin: "-100px" }}
+            variants={stagger}
+            className="text-center mb-16"
+          >
+            <motion.span variants={fadeUp} className="text-xs font-mono text-accent tracking-wider uppercase">
+              01 — Services
+            </motion.span>
+            <motion.h2 variants={fadeUp} className="text-3xl sm:text-4xl font-bold mt-3 tracking-tight">
+              {t.our_services}
+            </motion.h2>
+          </motion.div>
 
-      {/* Portfolio Preview Section */}
-      <section className="py-16 bg-gray-50">
-        <div className="container mx-auto px-4 sm:px-8">
-          <h2 className="text-2xl sm:text-3xl font-semibold text-center mb-8">{t.portfolio_title}</h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
-            {projects.map((project) => (
-              <div
-                key={project.id}
-                className="bg-white rounded-lg shadow-md overflow-hidden transform transition duration-300 hover:scale-105 hover:shadow-lg"
-              >
-                {/* Carousel for project images */}
-                <Slider {...sliderSettings}>
-                  {project.images.map((image, index) => (
-                    <div key={index}>
-                      <Image src={image.src} alt={image.alt} width={600} height={600} className="w-full h-full object-cover" />
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, margin: "-50px" }}
+            variants={stagger}
+            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
+          >
+            {t.services.map((service, index) => {
+              const Icon = serviceIconMap[service.icon] || Monitor;
+              return (
+                <motion.div key={index} variants={fadeUp}>
+                  <Link href={service.link} className="group block">
+                    <div className="h-full bg-card-bg border border-card-border rounded-xl p-6 transition-all duration-300 hover:border-accent/40 hover:-translate-y-1 hover:shadow-[0_8px_30px_rgba(45,212,191,0.08)]">
+                      <div className="w-10 h-10 rounded-lg bg-accent/10 flex items-center justify-center mb-4 group-hover:bg-accent/20 transition-colors">
+                        <Icon className="w-5 h-5 text-accent" />
+                      </div>
+                      <h3 className="text-lg font-semibold mb-2 group-hover:text-accent transition-colors">
+                        {service.title}
+                      </h3>
+                      <p className="text-sm text-muted leading-relaxed mb-4">
+                        {service.description}
+                      </p>
+                      <span className="inline-flex items-center gap-1 text-sm font-medium text-accent opacity-0 group-hover:opacity-100 transition-opacity">
+                        {t.view_more}
+                        <ArrowRight className="w-3.5 h-3.5" />
+                      </span>
                     </div>
-                  ))}
-                </Slider>
-                <div className="p-6"></div>
-              </div>
+                  </Link>
+                </motion.div>
+              );
+            })}
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Portfolio Section */}
+      <section className="py-24 bg-card-bg/30">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, margin: "-100px" }}
+            variants={stagger}
+            className="text-center mb-16"
+          >
+            <motion.span variants={fadeUp} className="text-xs font-mono text-accent tracking-wider uppercase">
+              02 — Portfolio
+            </motion.span>
+            <motion.h2 variants={fadeUp} className="text-3xl sm:text-4xl font-bold mt-3 tracking-tight">
+              {t.portfolio_title}
+            </motion.h2>
+          </motion.div>
+
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, margin: "-50px" }}
+            variants={stagger}
+            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
+          >
+            {projects.map((project) => (
+              <motion.div key={project.id} variants={fadeUp}>
+                <div className="group relative bg-card-bg border border-card-border rounded-xl overflow-hidden transition-all duration-300 hover:border-accent/40 hover:-translate-y-1 hover:shadow-[0_8px_30px_rgba(45,212,191,0.08)]">
+                  <div className="aspect-[4/3] relative overflow-hidden">
+                    <Image
+                      src={project.images[0]}
+                      alt={`Project ${project.id}`}
+                      fill
+                      className="object-cover transition-transform duration-500 group-hover:scale-105"
+                    />
+                    {/* Hover overlay */}
+                    <div className="absolute inset-0 bg-background/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                      <Link
+                        href="/portfolio"
+                        className="px-4 py-2 bg-accent text-background text-sm font-semibold rounded-lg hover:bg-accent-hover transition-colors"
+                      >
+                        {t.portfolio_learn_more || "View Details"}
+                      </Link>
+                    </div>
+                  </div>
+                  <div className="p-4">
+                    <div className="flex items-center gap-2 mb-2">
+                      <span className="px-2 py-0.5 bg-accent/10 text-accent text-xs font-mono rounded">
+                        {project.category}
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </motion.div>
             ))}
-          </div>
-          {/* View More Portfolio Button */}
-          <div className="text-center mt-8">
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-center mt-12"
+          >
             <Link
               href="/portfolio"
-              className="inline-block bg-yellow-600 text-white hover:bg-yello-900 hover:text-white font-semibold py-2 px-6 rounded transition duration-200"
+              className="inline-flex items-center gap-2 px-6 py-3 border border-card-border text-foreground font-semibold rounded-lg hover:border-accent/50 hover:bg-accent/5 transition-all"
             >
               {t.portfolio_view_more}
+              <ArrowRight className="w-4 h-4" />
             </Link>
-          </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-24 bg-background relative overflow-hidden">
+        <div className="absolute inset-0 bg-accent/3 rounded-3xl" />
+        <div className="relative max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+          >
+            <h2 className="text-3xl sm:text-4xl font-bold tracking-tight mb-4">
+              {t.portfolio_cta_title}
+            </h2>
+            <p className="text-muted text-lg mb-8">{t.portfolio_cta_text}</p>
+            <Link
+              href="/contact"
+              className="inline-flex items-center gap-2 px-8 py-4 bg-accent text-background font-semibold rounded-lg hover:bg-accent-hover transition-all hover:shadow-[0_0_30px_rgba(45,212,191,0.3)]"
+            >
+              {t.nav_contact}
+              <ArrowRight className="w-4 h-4" />
+            </Link>
+          </motion.div>
         </div>
       </section>
     </Layout>
