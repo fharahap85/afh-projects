@@ -4,7 +4,6 @@ import SEO from "../../components/SEO";
 import { useRouter } from "next/router";
 import en from "../../locales/en/common.json";
 import id from "../../locales/id/common.json";
-import Image from "next/image";
 import { motion } from "framer-motion";
 import { Check, ArrowRight, Monitor } from "lucide-react";
 
