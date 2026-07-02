@@ -147,8 +147,8 @@ export default function Contact() {
                       <p className="text-sm text-muted">
                         {locale === "id" ? "Telepon" : "Phone"}
                       </p>
-                      <a href="tel:+6289528842802" className="text-foreground hover:text-accent transition-colors">
-                        +62 895-2884-2802
+                      <a href="tel:+6282274044674" className="text-foreground hover:text-accent transition-colors">
+                        +62 822-7404-4674
                       </a>
                     </div>
                   </div>
