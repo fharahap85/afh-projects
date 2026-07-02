@@ -32,11 +32,8 @@ export default function Footer() {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-8">
           {/* Brand */}
           <div className="sm:col-span-2 lg:col-span-1">
-            <Link href="/" className="flex items-center gap-2 group mb-4">
-              <div className="w-8 h-8 rounded-lg bg-accent/10 border border-accent/30 flex items-center justify-center">
-                <span className="font-mono text-sm font-bold text-accent">A</span>
-              </div>
-              <span className="font-bold text-lg tracking-tight text-foreground group-hover:text-accent transition-colors">
+            <Link href="/" className="inline-flex items-center group mb-4">
+              <span className="px-2.5 py-1 bg-accent text-background font-bold text-lg tracking-tight rounded-lg group-hover:shadow-[0_0_20px_rgba(45,212,191,0.3)] transition-shadow">
                 AFH Projects
               </span>
             </Link>

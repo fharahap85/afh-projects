@@ -93,11 +93,8 @@ export default function Header() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 lg:h-18">
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-2 group">
-            <div className="w-8 h-8 rounded-lg bg-accent/10 border border-accent/30 flex items-center justify-center">
-              <span className="font-mono text-sm font-bold text-accent">A</span>
-            </div>
-            <span className="font-bold text-lg tracking-tight text-foreground group-hover:text-accent transition-colors">
+          <Link href="/" className="flex items-center group">
+            <span className="px-2.5 py-1 bg-accent text-background font-bold text-lg tracking-tight rounded-lg group-hover:shadow-[0_0_20px_rgba(45,212,191,0.3)] transition-shadow">
               AFH Projects
             </span>
           </Link>
