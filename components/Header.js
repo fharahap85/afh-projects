@@ -180,7 +180,7 @@ export default function Header() {
             {mounted && (
               <button
                 onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-                className="p-2 rounded-lg text-muted hover:text-foreground hover:bg-accent/10 transition-colors"
+                className="p-2.5 rounded-lg text-muted hover:text-foreground hover:bg-accent/10 transition-colors"
                 aria-label="Toggle theme"
               >
                 {theme === "dark" ? <Sun className="w-4 h-4" /> : <Moon className="w-4 h-4" />}
@@ -199,7 +199,7 @@ export default function Header() {
             {/* Mobile Menu Toggle */}
             <button
               onClick={() => setMenuOpen(!menuOpen)}
-              className="lg:hidden p-2 rounded-lg text-muted hover:text-foreground hover:bg-accent/10 transition-colors"
+              className="lg:hidden p-2.5 rounded-lg text-muted hover:text-foreground hover:bg-accent/10 transition-colors"
               aria-label="Toggle menu"
             >
               {menuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
