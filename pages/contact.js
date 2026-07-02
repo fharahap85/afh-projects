@@ -147,7 +147,19 @@ export default function Contact() {
                       <p className="text-sm text-muted">
                         {locale === "id" ? "Telepon" : "Phone"}
                       </p>
-                      <a href="tel:+6282274044674" className="text-foreground hover:text-accent transition-colors">
+                      <a href="tel:+6289528842802" className="text-foreground hover:text-accent transition-colors">
+                        +62 895-2884-2802
+                      </a>
+                    </div>
+                  </div>
+
+                  <div className="flex items-start gap-4">
+                    <div className="w-10 h-10 rounded-lg bg-accent/10 flex items-center justify-center flex-shrink-0">
+                      <Phone className="w-5 h-5 text-accent" />
+                    </div>
+                    <div>
+                      <p className="text-sm text-muted">WhatsApp</p>
+                      <a href="https://wa.me/6282274044674" target="_blank" rel="noopener noreferrer" className="text-foreground hover:text-accent transition-colors">
                         +62 822-7404-4674
                       </a>
                     </div>

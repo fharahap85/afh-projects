@@ -42,7 +42,7 @@ export default function Footer() {
             </p>
             <div className="flex items-center gap-3">
               <a
-                href="https://www.linkedin.com/in/lukman-nul-hakim-059491196/"
+                href="https://www.linkedin.com/in/abdullah-fikri-harahap-916704110/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-9 h-9 rounded-lg bg-card-bg border border-card-border flex items-center justify-center text-muted hover:text-accent hover:border-accent/40 transition-colors"
@@ -133,8 +133,14 @@ export default function Footer() {
               </li>
               <li className="flex items-start gap-3">
                 <Phone className="w-4 h-4 text-accent mt-0.5 flex-shrink-0" />
-                <a href="tel:+6282274044674" className="text-sm text-muted hover:text-accent transition-colors">
-                  +62 822-7404-4674
+                <a href="tel:+6289528842802" className="text-sm text-muted hover:text-accent transition-colors">
+                  +62 895-2884-2802
+                </a>
+              </li>
+              <li className="flex items-start gap-3">
+                <Phone className="w-4 h-4 text-accent mt-0.5 flex-shrink-0" />
+                <a href="https://wa.me/6282274044674" target="_blank" rel="noopener noreferrer" className="text-sm text-muted hover:text-accent transition-colors">
+                  +62 822-7404-4674 (WA)
                 </a>
               </li>
               <li className="flex items-start gap-3">
