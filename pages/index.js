@@ -40,9 +40,9 @@ export default function Home() {
   const t = locale === "id" ? id : en;
 
   const projects = [
-    { id: 1, images: ["/assets/portfolio/mobile/fixitnow1.png", "/assets/portfolio/mobile/fixitnow2.png"], category: "mobile" },
-    { id: 2, images: ["/assets/portfolio/website/eventease1.svg", "/assets/portfolio/website/eventease2.svg"], category: "website" },
-    { id: 3, images: ["/assets/portfolio/website/innoval1.svg", "/assets/portfolio/website/innoval2.svg"], category: "website" },
+    { id: 1, name: "FixItNow", images: ["/assets/portfolio/mobile/fixitnow1.png", "/assets/portfolio/mobile/fixitnow2.png"], category: "mobile" },
+    { id: 2, name: "EventEase", images: ["/assets/portfolio/website/eventease1.svg", "/assets/portfolio/website/eventease2.svg"], category: "website" },
+    { id: 3, name: "Innoval", images: ["/assets/portfolio/website/innoval1.svg", "/assets/portfolio/website/innoval2.svg"], category: "website" },
   ];
 
   return (
@@ -240,7 +240,7 @@ export default function Home() {
                   <div className="aspect-[4/3] relative overflow-hidden">
                     <Image
                       src={project.images[0]}
-                      alt={`Project ${project.id}`}
+                      alt={project.name}
                       fill
                       className="object-cover transition-transform duration-500 group-hover:scale-105"
                     />
