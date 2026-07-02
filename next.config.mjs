@@ -7,7 +7,12 @@ const nextConfig = {
     localeDetection: false,
   },
   images: {
-    domains: ["flagcdn.com"],
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "flagcdn.com",
+      },
+    ],
   },
 };
 
