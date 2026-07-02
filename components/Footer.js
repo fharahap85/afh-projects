@@ -148,15 +148,11 @@ export default function Footer() {
               </li>
               <li className="flex items-start gap-3">
                 <Phone className="w-4 h-4 text-accent mt-0.5 flex-shrink-0" />
-                <a href="tel:+6289528842802" className="text-sm text-muted hover:text-accent transition-colors">
-                  +62 895-2884-2802
-                </a>
-              </li>
-              <li className="flex items-start gap-3">
-                <Phone className="w-4 h-4 text-accent mt-0.5 flex-shrink-0" />
-                <a href="https://wa.me/6282274044674" target="_blank" rel="noopener noreferrer" className="text-sm text-muted hover:text-accent transition-colors">
-                  +62 822-7404-4674 (WA)
-                </a>
+                <span className="text-sm text-muted">
+                  <a href="https://wa.me/6289528842802" target="_blank" rel="noopener noreferrer" className="hover:text-accent transition-colors">+62 895-2884-2802</a>
+                  {" | "}
+                  <a href="https://wa.me/6282274044674" target="_blank" rel="noopener noreferrer" className="hover:text-accent transition-colors">+62 822-7404-4674</a>
+                </span>
               </li>
               <li className="flex items-start gap-3">
                 <MapPin className="w-4 h-4 text-accent mt-0.5 flex-shrink-0" />
