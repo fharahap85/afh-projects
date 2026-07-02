@@ -10,6 +10,86 @@
   "desc_home": "Kami membantu perusahaan merancang, membangun, dan mengembangkan solusi digital — mulai dari aplikasi mobile, sistem backend, hingga dashboard operasional yang mendukung pertumbuhan bisnis jangka panjang. Dengan pengalaman bertahun-tahun, AFH Projects telah dipercaya berbagai sektor industri seperti keuangan, transportasi, gaya hidup, edukasi, manufaktur, dan layanan publik.",
   "our_portfolio" : "Portfolio Kami",
   "our_services" : "Pelayanan Kami",
+
+  "hero_headline": "Bangun Produk Digital\nYang Mendorong Pertumbuhan Bisnis",
+  "hero_sub": "Kami membantu bisnis membangun website, aplikasi web, aplikasi mobile, solusi AI, dan sistem digital yang scalable, aman, dan dibangun untuk masa depan.",
+  "hero_cta_primary": "Konsultasi Gratis",
+  "hero_cta_secondary": "Lihat Portofolio Kami",
+
+  "trusted_title": "Dipercaya oleh Perusahaan di Berbagai Industri",
+
+  "services_extended": [
+    { "title": "Pembuatan Website", "desc": "Website profesional dan responsif sesuai kebutuhan bisnis.", "icon": "Globe", "href": "/services/website-development" },
+    { "title": "Pengembangan Mobile App", "desc": "Aplikasi Android dan iOS berperforma tinggi.", "icon": "Smartphone", "href": "/services/mobile-aplication" },
+    { "title": "Aplikasi Web", "desc": "Aplikasi web scalable dengan arsitektur modern.", "icon": "Monitor", "href": "/services/backend-api-development" },
+    { "title": "UI/UX Design", "desc": "Antarmuka intuitif dan pengalaman pengguna optimal.", "icon": "Palette", "href": "/services/uiux-design" },
+    { "title": "Automasi AI", "desc": "Solusi cerdas berbasis kecerdasan buatan.", "icon": "Brain", "href": "/services/it-consulting" },
+    { "title": "Solusi Cloud", "desc": "Infrastruktur cloud dan strategi deployment.", "icon": "Cloud", "href": "/services/backend-api-development" },
+    { "title": "Integrasi Sistem", "desc": "Koneksi mulus antar sistem yang ada.", "icon": "Link", "href": "/services/backend-api-development" },
+    { "title": "Maintenance & Support", "desc": "Dukungan teknis dan pemeliharaan berkelanjutan.", "icon": "Headphones", "href": "/services/it-consulting" }
+  ],
+
+  "why_title": "Mengapa Memilih Kami",
+  "why_items": [
+    { "title": "Tim Berpengalaman", "desc": "Pengalaman bertahun-tahun di berbagai industri dan teknologi." },
+    { "title": "Arsitektur Scalable", "desc": "Sistem yang dirancang untuk tumbuh bersama bisnis Anda." },
+    { "title": "Pengembangan Agile", "desc": "Pendekatan iteratif untuk pengiriman cepat dan fleksibel." },
+    { "title": "SEO Friendly", "desc": "Optimasi bawaan untuk visibilitas mesin pencari." },
+    { "title": "Pengiriman Cepat", "desc": "Alur kerja efisien untuk memenuhi deadline Anda." },
+    { "title": "Dukungan Jangka Panjang", "desc": "Pemeliharaan dan dukungan teknis berkelanjutan." }
+  ],
+
+  "projects_title": "Proyek Unggulan",
+  "projects_subtitle": "Hasil nyata untuk bisnis nyata",
+  "projects": [
+    { "name": "Platform E-Commerce", "industry": "Retail", "challenge": "Membangun toko online scalable dengan checkout mulus.", "solution": "Frontend Next.js custom dengan integrasi pembayaran aman.", "result": "Penjualan online meningkat 3x dalam 3 bulan.", "tech": "Next.js, Stripe, PostgreSQL" },
+    { "name": "Aplikasi Mobile Banking", "industry": "Finance", "challenge": "Menciptakan pengalaman mobile banking yang aman dan ramah pengguna.", "solution": "Aplikasi Flutter dengan autentikasi biometrik dan notifikasi real-time.", "result": "50K+ unduhan di bulan pertama.", "tech": "Flutter, Node.js, Redis" },
+    { "name": "Dashboard Korporat", "industry": "Enterprise", "challenge": "Mempusatkan data operasi ke satu dashboard.", "solution": "Dashboard React dengan analitik real-time dan akses berbasis peran.", "result": "Pengurangan 40% waktu pelaporan manual.", "tech": "React, NestJS, PostgreSQL" }
+  ],
+
+  "process_title": "Proses Pengembangan Kami",
+  "process_steps": [
+    { "title": "Discover", "desc": "Memahami tujuan dan kebutuhan Anda." },
+    { "title": "Planning", "desc": "Menentukan ruang lingkup, timeline, dan arsitektur." },
+    { "title": "Design", "desc": "Membuat wireframe dan desain visual." },
+    { "title": "Development", "desc": "Membangun dengan kode yang bersih dan terawat." },
+    { "title": "Testing", "desc": "QA ketat untuk memastikan kualitas." },
+    { "title": "Launch", "desc": "Deployment dan dukungan go-live." },
+    { "title": "Maintenance", "desc": "Dukungan dan peningkatan berkelanjutan." }
+  ],
+
+  "tech_title": "Tech Stack Kami",
+  "tech_subtitle": "Alat modern untuk solusi modern",
+  "tech_stack": ["React", "Next.js", "Laravel", "Node.js", "Flutter", "TypeScript", "PostgreSQL", "Docker", "AWS", "Supabase", "NestJS", "Redis"],
+
+  "stats_title": "Catatan Kami",
+  "stats": [
+    { "value": 150, "suffix": "+", "label": "Proyek Selesai" },
+    { "value": 80, "suffix": "+", "label": "Klien Puas" },
+    { "value": 5, "suffix": "+", "label": "Tahun Pengalaman" },
+    { "value": 98, "suffix": "%", "label": "Kepuasan Klien" }
+  ],
+
+  "testimonials_title": "Apa Kata Klien Kami",
+  "testimonials": [
+    { "name": "Ahmad Rizky", "company": "TechStart Inc.", "position": "CEO", "quote": "AFH Projects menyelesaikan platform kami sebelum jadwal. Keahlian teknis dan komunikasi mereka luar biasa." },
+    { "name": "Sarah Chen", "company": "DigitalFlow", "position": "CTO", "quote": "Aplikasi mobile yang mereka bangkan melebihi ekspektasi. Kode bersih, UX hebat, dan dukungan berkelanjutan." },
+    { "name": "Budi Santoso", "company": "LogiCorp", "position": "Operations Director", "quote": "Solusi dashboard mereka mengubah cara kami mengelola operasi. Sangat direkomendasikan." }
+  ],
+
+  "faq_title": "Pertanyaan yang Sering Diajukan",
+  "faq_items": [
+    { "q": "Berapa lama proyek biasanya selesai?", "a": "Timeline proyek bervariasi berdasarkan kompleksitas. Website sederhana membutuhkan 2-4 minggu, sedangkan aplikasi web kompleks bisa memakan waktu 2-3 bulan." },
+    { "q": "Teknologi apa yang Anda gunakan?", "a": "Kami menggunakan stack modern termasuk React, Next.js, Node.js, Flutter, dan platform cloud seperti AWS dan Supabase." },
+    { "q": "Apakah Anda menyediakan dukungan berkelanjutan?", "a": "Ya, kami menawarkan paket pemeliharaan dan dukungan untuk menjaga produk Anda tetap berjalan lancar setelah peluncuran." },
+    { "q": "Bisakah Anda bekerja dengan tim kami yang ada?", "a": "Tentu saja. Kami menawarkan team augmentation dan dapat terintegrasi dengan alur kerja pengembangan Anda yang ada." },
+    { "q": "Apa model harga Anda?", "a": "Kami menawarkan harga berbasis proyek dan retainer. Hubungi kami untuk konsultasi gratis dan penawaran kustom." }
+  ],
+
+  "cta_title": "Siap Membangun Produk Digital Anda Selanjutnya?",
+  "cta_sub": "Mari diskusikan proyek Anda dan wujudkan visi Anda.",
+  "cta_button": "Mari Berbicara",
+
   "services": [
     {
       "icon": "🔧",

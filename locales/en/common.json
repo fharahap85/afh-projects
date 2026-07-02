@@ -10,6 +10,86 @@
   "desc_home": "We help companies design, build, and grow digital solutions — from mobile applications and backend systems to operational dashboards that support long-term business growth. With years of experience, AFH Projects has become a trusted partner across industries such as finance, transportation, lifestyle, education, manufacturing, and public services.",
   "our_portfolio" : "Our Portfolio",
   "our_services" : "Our Services",
+
+  "hero_headline": "Build Digital Products\nThat Drive Business Growth",
+  "hero_sub": "We help businesses build websites, web applications, mobile apps, AI solutions, and digital systems that are scalable, secure, and built for the future.",
+  "hero_cta_primary": "Get Free Consultation",
+  "hero_cta_secondary": "View Our Portfolio",
+
+  "trusted_title": "Trusted by Companies Across Multiple Industries",
+
+  "services_extended": [
+    { "title": "Website Development", "desc": "Professional, responsive websites tailored to your business needs.", "icon": "Globe", "href": "/services/website-development" },
+    { "title": "Mobile App Development", "desc": "High-performance Android and iOS applications.", "icon": "Smartphone", "href": "/services/mobile-aplication" },
+    { "title": "Web Application", "desc": "Scalable web apps with modern architecture.", "icon": "Monitor", "href": "/services/backend-api-development" },
+    { "title": "UI/UX Design", "desc": "Intuitive interfaces and optimal user experiences.", "icon": "Palette", "href": "/services/uiux-design" },
+    { "title": "AI Automation", "desc": "Intelligent solutions powered by artificial intelligence.", "icon": "Brain", "href": "/services/it-consulting" },
+    { "title": "Cloud Solutions", "desc": "Cloud infrastructure and deployment strategies.", "icon": "Cloud", "href": "/services/backend-api-development" },
+    { "title": "System Integration", "desc": "Seamless connection of your existing systems.", "icon": "Link", "href": "/services/backend-api-development" },
+    { "title": "Maintenance & Support", "desc": "Ongoing technical support and maintenance.", "icon": "Headphones", "href": "/services/it-consulting" }
+  ],
+
+  "why_title": "Why Choose Us",
+  "why_items": [
+    { "title": "Experienced Team", "desc": "Years of expertise across multiple industries and technologies." },
+    { "title": "Scalable Architecture", "desc": "Systems designed to grow with your business." },
+    { "title": "Agile Development", "desc": "Iterative approach ensuring fast delivery and flexibility." },
+    { "title": "SEO Friendly", "desc": "Built-in optimization for search engine visibility." },
+    { "title": "Fast Delivery", "desc": "Efficient workflows to meet your deadlines." },
+    { "title": "Long-Term Support", "desc": "Ongoing maintenance and technical support." }
+  ],
+
+  "projects_title": "Featured Projects",
+  "projects_subtitle": "Real results for real businesses",
+  "projects": [
+    { "name": "E-Commerce Platform", "industry": "Retail", "challenge": "Building a scalable online store with seamless checkout.", "solution": "Custom Next.js frontend with secure payment integration.", "result": "3x increase in online sales within 3 months.", "tech": "Next.js, Stripe, PostgreSQL" },
+    { "name": "Mobile Banking App", "industry": "Finance", "challenge": "Creating a secure, user-friendly mobile banking experience.", "solution": "Flutter app with biometric auth and real-time notifications.", "result": "50K+ downloads in first month.", "tech": "Flutter, Node.js, Redis" },
+    { "name": "Corporate Dashboard", "industry": "Enterprise", "challenge": "Centralizing operations data into one dashboard.", "solution": "React dashboard with real-time analytics and role-based access.", "result": "40% reduction in manual reporting time.", "tech": "React, NestJS, PostgreSQL" }
+  ],
+
+  "process_title": "Our Development Process",
+  "process_steps": [
+    { "title": "Discover", "desc": "Understanding your goals and requirements." },
+    { "title": "Planning", "desc": "Defining scope, timeline, and architecture." },
+    { "title": "Design", "desc": "Creating wireframes and visual designs." },
+    { "title": "Development", "desc": "Building with clean, maintainable code." },
+    { "title": "Testing", "desc": "Rigorous QA to ensure quality." },
+    { "title": "Launch", "desc": "Deployment and go-live support." },
+    { "title": "Maintenance", "desc": "Ongoing support and improvements." }
+  ],
+
+  "tech_title": "Technology Stack",
+  "tech_subtitle": "Modern tools for modern solutions",
+  "tech_stack": ["React", "Next.js", "Laravel", "Node.js", "Flutter", "TypeScript", "PostgreSQL", "Docker", "AWS", "Supabase", "NestJS", "Redis"],
+
+  "stats_title": "Our Track Record",
+  "stats": [
+    { "value": 150, "suffix": "+", "label": "Projects Delivered" },
+    { "value": 80, "suffix": "+", "label": "Happy Clients" },
+    { "value": 5, "suffix": "+", "label": "Years Experience" },
+    { "value": 98, "suffix": "%", "label": "Client Satisfaction" }
+  ],
+
+  "testimonials_title": "What Our Clients Say",
+  "testimonials": [
+    { "name": "Ahmad Rizky", "company": "TechStart Inc.", "position": "CEO", "quote": "AFH Projects delivered our platform ahead of schedule. Their technical expertise and communication were outstanding." },
+    { "name": "Sarah Chen", "company": "DigitalFlow", "position": "CTO", "quote": "The mobile app they built for us exceeded expectations. Clean code, great UX, and ongoing support." },
+    { "name": "Budi Santoso", "company": "LogiCorp", "position": "Operations Director", "quote": "Their dashboard solution transformed how we manage our operations. Highly recommended." }
+  ],
+
+  "faq_title": "Frequently Asked Questions",
+  "faq_items": [
+    { "q": "How long does a typical project take?", "a": "Project timelines vary based on complexity. A simple website takes 2-4 weeks, while a complex web application may take 2-3 months." },
+    { "q": "What technologies do you use?", "a": "We use modern stacks including React, Next.js, Node.js, Flutter, and cloud platforms like AWS and Supabase." },
+    { "q": "Do you provide ongoing support?", "a": "Yes, we offer maintenance and support packages to keep your product running smoothly after launch." },
+    { "q": "Can you work with our existing team?", "a": "Absolutely. We offer team augmentation and can integrate with your existing development workflow." },
+    { "q": "What is your pricing model?", "a": "We offer project-based and retainer pricing. Contact us for a free consultation and custom quote." }
+  ],
+
+  "cta_title": "Ready to Build Your Next Digital Product?",
+  "cta_sub": "Let's discuss your project and bring your vision to life.",
+  "cta_button": "Let's Talk",
+
   "services": [
     {
       "icon": "🔧",
