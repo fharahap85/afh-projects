@@ -54,7 +54,7 @@ export default function Footer() {
                 <GithubIcon />
               </a>
               <a
-                href="https://linkedin.com"
+                href="https://linkedin.com/company/afh-projects"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-9 h-9 rounded-lg bg-card-bg border border-card-border flex items-center justify-center text-muted hover:text-accent hover:border-accent/40 transition-colors"
@@ -63,7 +63,7 @@ export default function Footer() {
                 <LinkedinIcon />
               </a>
               <a
-                href="https://instagram.com"
+                href="https://instagram.com/afhprojects"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-9 h-9 rounded-lg bg-card-bg border border-card-border flex items-center justify-center text-muted hover:text-accent hover:border-accent/40 transition-colors"
