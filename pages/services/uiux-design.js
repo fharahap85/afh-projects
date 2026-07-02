@@ -1,10 +1,16 @@
 import Link from "next/link";
-import Image from "next/image";
 import Layout from "../../components/Layout";
 import SEO from "../../components/SEO";
 import { useRouter } from "next/router";
 import en from "../../locales/en/common.json";
 import id from "../../locales/id/common.json";
+import { motion } from "framer-motion";
+import { Check, ArrowRight, Palette } from "lucide-react";
+
+const fadeUp = {
+  hidden: { opacity: 0, y: 30 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } },
+};
 
 export default function Services() {
   const { locale } = useRouter();
@@ -12,125 +18,73 @@ export default function Services() {
 
   return (
     <Layout>
-      <SEO
-        title={t.nav_services_uiux || "UI/UX Design"}
-        description={t.services_uiux_description || "Creating intuitive user experiences and stunning interface designs."}
-      />
+      <SEO title={t.nav_services_uiux} description={t.services_uiux_description} />
       <div className="flex flex-col md:grid md:grid-cols-[40%_60%] min-h-screen">
-        {/* Hero Section - Full-screen on Mobile, Fixed on Desktop */}
-        <section className="relative flex flex-col justify-center items-center p-4 sm:p-6 md:p-10 bg-gray-100 h-screen md:sticky md:top-0 md:h-screen">
-          <div className="absolute inset-0 bg-animated-transparent z-0" />
-          <div className="relative z-10 text-blue-900 text-center drop-shadow-xl">
-            <h1 className="text-3xl md:text-5xl font-extrabold">{t.nav_services_uiux || "UI/UX Design"}</h1>
-            <p className="mt-4 text-lg md:text-2xl font-light">
-              {t.services_uiux_description || "Menciptakan pengalaman pengguna yang intuitif dan desain antarmuka yang memukau."}
-            </p>
+        <section className="relative flex flex-col justify-center items-center p-6 sm:p-8 md:p-10 bg-accent/5 border-b md:border-b-0 md:border-r border-card-border h-auto md:h-screen md:sticky md:top-16">
+          <div className="relative z-10 text-center max-w-md">
+            <div className="w-14 h-14 mx-auto rounded-2xl bg-accent/10 flex items-center justify-center mb-6">
+              <Palette className="w-7 h-7 text-accent" />
+            </div>
+            <h1 className="text-3xl md:text-4xl font-extrabold tracking-tight">{t.nav_services_uiux}</h1>
+            <p className="mt-4 text-muted leading-relaxed">{t.services_uiux_description}</p>
           </div>
         </section>
 
-        {/* Scrollable Content */}
-        <section className="overflow-y-auto md:h-screen bg-white">
-          <div className="py-12 px-4 sm:px-6 md:py-20 md:px-6">
-            <h2 className="text-3xl md:text-4xl text-center font-bold text-blue-900 mb-8 md:mb-10">
-              {t.services_uiux_why_title || "Desain yang Tidak Hanya Cantik, Tapi Juga Berfungsi"}
-            </h2>
-            <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center">
-              <div>
-                <p className="mt-4 text-gray-600 leading-relaxed">
-                  {t.services_uiux_why_content ||
-                    "UI/UX bukan hanya tentang estetika, tetapi juga tentang bagaimana pengguna berinteraksi dengan produk digital Anda. Kami merancang alur yang logis dan antarmuka yang menarik untuk memastikan pengalaman pengguna yang tak terlupakan."}
-                </p>
-                <ul className="mt-6 space-y-4 text-gray-700">
-                  <li className="flex items-start">
-                    <svg className="w-6 h-6 text-indigo-900 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
-                    </svg>
-                    <div>
-                      <span className="font-semibold text-blue-900">{t.services_uiux_interface || "Antarmuka Menarik"}:</span>{" "}
-                      {t.services_uiux_interface_desc || "Desain visual yang konsisten dan sesuai dengan identitas merek Anda."}
-                    </div>
-                  </li>
-                  <li className="flex items-start">
-                    <svg className="w-6 h-6 text-indigo-900 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
-                    </svg>
-                    <div>
-                      <span className="font-semibold text-blue-900">{t.services_uiux_experience || "Pengalaman Intuitif"}:</span>{" "}
-                      {t.services_uiux_experience_desc || "Alur navigasi yang mudah dipahami, mengurangi gesekan bagi pengguna."}
-                    </div>
-                  </li>
-                  <li className="flex items-start">
-                    <svg className="w-6 h-6 text-indigo-900 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
-                    </svg>
-                    <div>
-                      <span className="font-semibold text-blue-900">{t.services_uiux_conversion || "Optimasi Konversi"}:</span>{" "}
-                      {t.services_uiux_conversion_desc || "Desain yang teruji untuk meningkatkan konversi dan retensi pengguna."}
-                    </div>
-                  </li>
-                </ul>
-              </div>
+        <section className="bg-background">
+          <div className="py-12 px-4 sm:px-6 md:py-20 md:px-8 max-w-2xl mx-auto">
+            <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp}>
+              <span className="text-xs font-mono text-accent tracking-wider uppercase">Why</span>
+              <h2 className="text-2xl md:text-3xl font-bold mt-2 mb-4">{t.services_uiux_why_title}</h2>
+              <p className="text-muted leading-relaxed mb-6">{t.services_uiux_why_content}</p>
+            </motion.div>
 
-              <div>
-                <Image
-                  src="/assets/ui_ux.png"
-                  alt={t.services_uiux_image_alt || "Ilustrasi UI/UX Design"}
-                  width={500} // Sesuaikan ukuran lebar gambar sesuai kebutuhan
-                  height={300} // Sesuaikan ukuran tinggi gambar sesuai kebutuhan
-                  className="rounded-lg shadow-xl w-full"
-                />
-              </div>
-            </div>
-
-            {/* Process Section */}
-            <div className="bg-gray-50 py-12 md:py-20 mt-12 md:mt-20">
-              <div className="container mx-auto px-4 sm:px-6">
-                <h2 className="text-2xl md:text-3xl font-bold text-center text-blue-900">
-                  {t.services_uiux_process_title || "Proses Desain UI/UX Kami"}
-                </h2>
-                <div className="mt-8 md:mt-12 grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-10">
-                  <div className="bg-white p-6 md:py-8 md:px-2 rounded-lg shadow-lg text-center">
-                    <h3 className="text-lg md:text-xl font-bold text-blue-900">
-                      {t.services_uiux_process_research || "1. Riset & Analisis"}
-                    </h3>
-                    <p className="mt-2 text-gray-600">
-                      {t.services_uiux_process_research_desc || "Kami melakukan riset pengguna dan menganalisis kebutuhan produk."}
+            <motion.ul initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} className="space-y-4 mb-16">
+              {[t.services_uiux_interface, t.services_uiux_experience, t.services_uiux_conversion].map((title, i) => (
+                <li key={i} className="flex items-start gap-3">
+                  <div className="w-6 h-6 rounded-full bg-accent/10 flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <Check className="w-3.5 h-3.5 text-accent" />
+                  </div>
+                  <div>
+                    <span className="font-semibold">{title}</span>
+                    <p className="text-sm text-muted mt-0.5">
+                      {[t.services_uiux_interface_desc, t.services_uiux_experience_desc, t.services_uiux_conversion_desc][i]}
                     </p>
                   </div>
-                  <div className="bg-white p-6 md:py-8 md:px-2 rounded-lg shadow-lg text-center">
-                    <h3 className="text-lg md:text-xl font-bold text-blue-900">
-                      {t.services_uiux_process_prototyping || "2. Wireframing & Prototyping"}
-                    </h3>
-                    <p className="mt-2 text-gray-600">
-                      {t.services_uiux_process_prototyping_desc || "Kami membuat sketsa, wireframe, dan prototipe interaktif untuk diuji."}
+                </li>
+              ))}
+            </motion.ul>
+
+            <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp}>
+              <span className="text-xs font-mono text-accent tracking-wider uppercase">Process</span>
+              <h2 className="text-2xl md:text-3xl font-bold mt-2 mb-8">{t.services_uiux_process_title}</h2>
+            </motion.div>
+
+            <div className="space-y-4 mb-16">
+              {[t.services_uiux_process_research, t.services_uiux_process_prototyping, t.services_uiux_process_design].map((title, i) => (
+                <motion.div key={i} initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp}>
+                  <div className="bg-card-bg border border-card-border rounded-xl p-5 hover:border-accent/40 transition-colors">
+                    <div className="flex items-center gap-3">
+                      <span className="w-8 h-8 rounded-lg bg-accent/10 flex items-center justify-center font-mono text-sm font-bold text-accent">{i + 1}</span>
+                      <h3 className="font-semibold">{title}</h3>
+                    </div>
+                    <p className="text-sm text-muted mt-2 ml-11">
+                      {[t.services_uiux_process_research_desc, t.services_uiux_process_prototyping_desc, t.services_uiux_process_design_desc][i]}
                     </p>
                   </div>
-                  <div className="bg-white p-6 md:py-8 md:px-2 rounded-lg shadow-lg text-center">
-                    <h3 className="text-lg md:text-xl font-bold text-blue-900">
-                      {t.services_uiux_process_design || "3. Desain Visual & Uji Usability"}
-                    </h3>
-                    <p className="mt-2 text-gray-600">
-                      {t.services_uiux_process_design_desc || "Kami menyempurnakan desain visual dan menguji alur dengan pengguna nyata."}
-                    </p>
-                  </div>
-                </div>
+                </motion.div>
+              ))}
+            </div>
+
+            <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp}>
+              <div className="bg-accent/5 border border-accent/20 rounded-xl p-8 text-center">
+                <h2 className="text-xl font-bold mb-2">{t.services_uiux_cta_title}</h2>
+                <p className="text-muted text-sm mb-6">{t.services_uiux_cta_desc}</p>
+                <Link href="/contact" className="inline-flex items-center gap-2 px-6 py-3 bg-accent text-background font-semibold rounded-lg hover:bg-accent-hover transition-all hover:shadow-[0_0_20px_rgba(45,212,191,0.3)]">
+                  {t.services_uiux_cta_button}
+                  <ArrowRight className="w-4 h-4" />
+                </Link>
               </div>
-            </div>
-
-            {/* CTA Section */}
-            <div className="bg-blue-900 text-white py-12 md:py-16 text-center mt-12 md:mt-20 rounded-lg">
-              <h2 className="text-xl md:text-2xl font-bold">
-                {t.services_uiux_cta_title || "Siap Meningkatkan Pengalaman Pengguna Anda?"}
-              </h2>
-              <p className="mt-4">{t.services_uiux_cta_desc || "Hubungi kami untuk konsultasi gratis."}</p>
-
-              <Link
-                href="/contact"
-                className="mt-6 inline-block bg-yellow-500 text-white font-semibold px-6 py-3 rounded-lg hover:bg-yellow-600 transition duration-300"
-              >
-                {t.services_uiux_cta_button || "Hubungi Kami Sekarang"}
-              </Link>
-            </div>
+            </motion.div>
           </div>
         </section>
       </div>

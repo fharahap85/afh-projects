@@ -4,6 +4,26 @@ import { useRouter } from "next/router";
 import en from "../../locales/en/common.json";
 import id from "../../locales/id/common.json";
 import Link from "next/link";
+import { motion } from "framer-motion";
+import { Monitor, Smartphone, BrainCircuit, Server, Palette, ArrowRight } from "lucide-react";
+
+const fadeUp = {
+  hidden: { opacity: 0, y: 30 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } },
+};
+
+const stagger = {
+  visible: { transition: { staggerChildren: 0.1 } },
+};
+
+const serviceIcons = [Monitor, Smartphone, BrainCircuit, Server, Palette];
+const serviceLinks = [
+  "/services/website-development",
+  "/services/mobile-application",
+  "/services/it-consulting",
+  "/services/backend-api-development",
+  "/services/uiux-design",
+];
 
 export default function Services() {
   const { locale } = useRouter();
@@ -12,129 +32,62 @@ export default function Services() {
   return (
     <Layout>
       <SEO title={t.nav_services} description="Our services" />
-      <section className="bg-indigo-600 text-white py-20">
-        <div className="container mx-auto text-center px-6">
-          <h1 className="text-4xl md:text-5xl font-extrabold">Layanan Kami</h1>
-          <p className="mt-4 text-xl md:text-2xl font-light">Membangun solusi digital yang sesuai dengan kebutuhan bisnis Anda.</p>
+
+      {/* Hero */}
+      <section className="relative py-24 overflow-hidden">
+        <div className="absolute inset-0 bg-background">
+          <div className="absolute top-1/4 -right-32 w-96 h-96 bg-accent/5 rounded-full blur-3xl" />
+        </div>
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div initial="hidden" animate="visible" variants={stagger} className="max-w-3xl">
+            <motion.span variants={fadeUp} className="text-xs font-mono text-accent tracking-wider uppercase">
+              01 — Services
+            </motion.span>
+            <motion.h1 variants={fadeUp} className="text-4xl sm:text-5xl font-extrabold tracking-tight mt-3 mb-6">
+              {t.nav_services}
+            </motion.h1>
+            <motion.p variants={fadeUp} className="text-muted text-lg leading-relaxed">
+              {locale === "id"
+                ? "Membangun solusi digital yang sesuai dengan kebutuhan bisnis Anda."
+                : "Building digital solutions tailored to your business needs."}
+            </motion.p>
+          </motion.div>
         </div>
       </section>
 
-      <section className="py-20">
-        <div className="container mx-auto px-6">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
-            <Link href="services/layanan-website">
-              <div className="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 transform hover:-translate-y-1">
-                <div className="text-indigo-600 mb-4">
-                  <svg
-                    className="w-12 h-12 mx-auto"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth="2"
-                      d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"
-                    />
-                  </svg>
-                </div>
-                <h3 className="text-2xl font-bold text-center">Pembuatan Website</h3>
-                <p className="mt-4 text-gray-600 text-center">
-                  Kami membangun website profesional dan responsif sesuai kebutuhan bisnis Anda.
-                </p>
-              </div>
-            </Link>
-
-            <Link href="services/layanan-aplikasi">
-              <div className="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 transform hover:-translate-y-1">
-                <div className="text-indigo-600 mb-4">
-                  <svg
-                    className="w-12 h-12 mx-auto"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth="2"
-                      d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"
-                    />
-                  </svg>
-                </div>
-                <h3 className="text-2xl font-bold text-center">Aplikasi Mobile</h3>
-                <p className="mt-4 text-gray-600 text-center">Pengembangan aplikasi mobile Android dan iOS dengan performa tinggi.</p>
-              </div>
-            </Link>
-
-            <Link href="services/layanan-konsultasi">
-              <div className="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 transform hover:-translate-y-1">
-                <div className="text-indigo-600 mb-4">
-                  <svg
-                    className="w-12 h-12 mx-auto"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth="2"
-                      d="M9 19V6l-2 2m0-4l4 4m-4-4l-4 4m8 8h8m-8-4h4"
-                    ></path>
-                  </svg>
-                </div>
-                <h3 className="text-2xl font-bold text-center">Konsultasi IT</h3>
-                <p className="mt-4 text-gray-600 text-center">
-                  Sesi konsultasi untuk solusi teknologi, arsitektur sistem, dan strategi digital.
-                </p>
-              </div>
-            </Link>
-
-            <Link href="services/layanan-backend">
-              <div className="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 transform hover:-translate-y-1">
-                <div className="text-indigo-600 mb-4">
-                  <svg
-                    className="w-12 h-12 mx-auto"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M8 12h8m-4 4h4m-4-8h4m-4 4V8"></path>
-                  </svg>
-                </div>
-                <h3 className="text-2xl font-bold text-center">Backend & API</h3>
-                <p className="mt-4 text-gray-600 text-center">
-                  Pembuatan backend yang scalable, aman, dan cepat dengan integrasi API modern.
-                </p>
-              </div>
-            </Link>
-
-            <Link href="services/layanan-uiux">
-              <div className="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 transform hover:-translate-y-1">
-                <div className="text-indigo-600 mb-4">
-                  <svg
-                    className="w-12 h-12 mx-auto"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 12a5 5 0 100-10 5 5 0 000 10z" />
-                  </svg>
-                </div>
-                <h3 className="text-2xl font-bold text-center">UI/UX Design</h3>
-                <p className="mt-4 text-gray-600 text-center">
-                  Menciptakan pengalaman pengguna yang intuitif dan desain antarmuka yang memukau.
-                </p>
-              </div>
-            </Link>
-          </div>
+      {/* Services Grid */}
+      <section className="py-24 bg-card-bg/30">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, margin: "-50px" }}
+            variants={stagger}
+            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
+          >
+            {t.services.map((service, index) => {
+              const Icon = serviceIcons[index] || Monitor;
+              return (
+                <motion.div key={index} variants={fadeUp}>
+                  <Link href={serviceLinks[index]} className="group block h-full">
+                    <div className="h-full bg-card-bg border border-card-border rounded-xl p-6 transition-all duration-300 hover:border-accent/40 hover:-translate-y-1 hover:shadow-[0_8px_30px_rgba(45,212,191,0.08)]">
+                      <div className="w-10 h-10 rounded-lg bg-accent/10 flex items-center justify-center mb-4 group-hover:bg-accent/20 transition-colors">
+                        <Icon className="w-5 h-5 text-accent" />
+                      </div>
+                      <h3 className="text-lg font-semibold mb-2 group-hover:text-accent transition-colors">
+                        {service.title}
+                      </h3>
+                      <p className="text-sm text-muted leading-relaxed mb-4">{service.description}</p>
+                      <span className="inline-flex items-center gap-1 text-sm font-medium text-accent opacity-0 group-hover:opacity-100 transition-opacity">
+                        {t.view_more}
+                        <ArrowRight className="w-3.5 h-3.5" />
+                      </span>
+                    </div>
+                  </Link>
+                </motion.div>
+              );
+            })}
+          </motion.div>
         </div>
       </section>
     </Layout>
