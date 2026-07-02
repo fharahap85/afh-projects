@@ -12,9 +12,6 @@ import {
   BrainCircuit,
   Server,
   Palette,
-  Code2,
-  Terminal,
-  Braces,
   ChevronDown,
 } from "lucide-react";
 
@@ -101,44 +98,21 @@ export default function Home() {
               </motion.div>
             </motion.div>
 
-            {/* Right: Visual - Code Terminal Mockup */}
+            {/* Right: Hero Image */}
             <motion.div
               initial={{ opacity: 0, x: 40 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8, delay: 0.3, ease: "easeOut" }}
-              className="hidden lg:block"
+              className="hidden lg:flex justify-center items-center"
             >
-              <div className="relative bg-card-bg border border-card-border rounded-2xl overflow-hidden shadow-2xl">
-                {/* Terminal header */}
-                <div className="flex items-center gap-2 px-4 py-3 bg-card-border/30 border-b border-card-border">
-                  <div className="flex gap-1.5">
-                    <div className="w-3 h-3 rounded-full bg-red-500/80" />
-                    <div className="w-3 h-3 rounded-full bg-yellow-500/80" />
-                    <div className="w-3 h-3 rounded-full bg-green-500/80" />
-                  </div>
-                  <span className="text-xs font-mono text-muted ml-2">afh-projects ~ </span>
-                </div>
-                {/* Terminal content */}
-                <div className="p-6 font-mono text-sm space-y-3">
-                  <div className="flex items-center gap-2">
-                    <span className="text-accent">$</span>
-                    <span className="text-muted">npx create-afh-app my-project</span>
-                  </div>
-                  <div className="text-muted/60 text-xs">Creating a new AFH Projects app...</div>
-                  <div className="flex items-center gap-2">
-                    <span className="text-accent">$</span>
-                    <span className="text-muted">cd my-project && npm run dev</span>
-                  </div>
-                  <div className="text-green-400 text-xs">✓ Ready in 1.2s</div>
-                  <div className="text-muted/60 text-xs">  ➜ Local:   http://localhost:3000</div>
-                  <div className="text-muted/60 text-xs">  ➜ Network: http://192.168.1.1:3000</div>
-                  <div className="pt-2 border-t border-card-border/50">
-                    <div className="flex items-center gap-2">
-                      <span className="text-accent">$</span>
-                      <span className="text-muted animate-pulse">▌</span>
-                    </div>
-                  </div>
-                </div>
+              <div className="relative w-full max-w-lg aspect-square">
+                <Image
+                  src="/assets/Gambar_Home_Kanan.png"
+                  alt={t.hero_image_alt}
+                  fill
+                  className="object-contain drop-shadow-2xl"
+                  priority
+                />
               </div>
             </motion.div>
           </div>

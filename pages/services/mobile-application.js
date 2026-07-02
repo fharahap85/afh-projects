@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import Layout from "../../components/Layout";
 import SEO from "../../components/SEO";
 import { useRouter } from "next/router";
@@ -22,8 +23,8 @@ export default function Services() {
       <div className="flex flex-col md:grid md:grid-cols-[40%_60%] min-h-screen">
         <section className="relative flex flex-col justify-center items-center p-6 sm:p-8 md:p-10 bg-accent/5 border-b md:border-b-0 md:border-r border-card-border h-auto md:h-screen md:sticky md:top-16">
           <div className="relative z-10 text-center max-w-md">
-            <div className="w-14 h-14 mx-auto rounded-2xl bg-accent/10 flex items-center justify-center mb-6">
-              <Smartphone className="w-7 h-7 text-accent" />
+            <div className="w-48 h-48 mx-auto mb-6 relative">
+              <Image src="/assets/Layanan_Mobile.png" alt={t.nav_services_mobile} fill className="object-contain" />
             </div>
             <h1 className="text-3xl md:text-4xl font-extrabold tracking-tight">{t.nav_services_mobile}</h1>
             <p className="mt-4 text-muted leading-relaxed">{t.services_mobile_description}</p>
