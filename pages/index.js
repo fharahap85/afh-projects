@@ -1,4 +1,5 @@
 import Layout from "../components/Layout";
+import SEO from "../components/SEO";
 import { useRouter } from "next/router";
 import en from "../locales/en/common.json";
 import id from "../locales/id/common.json";
@@ -44,6 +45,7 @@ export default function Home() {
 
   return (
     <Layout>
+      <SEO title={t.title_home} description={t.desc_home} />
       {/* Hero Section */}
       <section className="relative min-h-[90vh] flex items-center overflow-hidden">
         {/* Background gradient mesh */}
