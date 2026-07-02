@@ -145,11 +145,10 @@ export default function Contact() {
                     </div>
                     <div>
                       <p className="text-sm text-muted">WhatsApp</p>
-                      <p className="text-foreground">
-                        <a href="https://wa.me/6289528842802" target="_blank" rel="noopener noreferrer" className="hover:text-accent transition-colors">+62 895-2884-2802</a>
-                        {" | "}
-                        <a href="https://wa.me/6282274044674" target="_blank" rel="noopener noreferrer" className="hover:text-accent transition-colors">+62 822-7404-4674</a>
-                      </p>
+                      <div className="text-foreground space-y-1">
+                        <a href="https://wa.me/6289528842802" target="_blank" rel="noopener noreferrer" className="block hover:text-accent transition-colors">+62 895-2884-2802</a>
+                        <a href="https://wa.me/6282274044674" target="_blank" rel="noopener noreferrer" className="block hover:text-accent transition-colors">+62 822-7404-4674</a>
+                      </div>
                     </div>
                   </div>
 
