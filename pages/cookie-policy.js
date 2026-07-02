@@ -64,7 +64,17 @@ export default function CookiesPolicy() {
 
             <div>
               <h2 className="text-2xl font-bold text-foreground mb-4">{c.your_choices.title}</h2>
-              <p>{c.your_choices.content}</p>
+              <p className="mb-4">{c.your_choices.content}</p>
+              <ul className="space-y-2 list-disc pl-6">
+                {c.your_choices.browser_instructions.map((item, i) => (
+                  <li key={i}>
+                    {locale === "id" ? "Untuk peramban" : "For"} {item.browser}, {locale === "id" ? "silakan kunjungi" : "please visit"}{" "}
+                    <Link href={item.url} className="text-accent hover:underline" target="_blank" rel="noopener noreferrer">
+                      {item.url}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
             </div>
 
             <div>

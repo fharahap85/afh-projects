@@ -449,13 +449,12 @@
     "your_choices": {
       "title": "Pilihan Anda Mengenai Cookies",
       "content": "Jika Anda lebih suka menghindari penggunaan Cookies di Situs Web, pertama-tama Anda harus menonaktifkan penggunaan Cookies di peramban Anda dan kemudian menghapus Cookies yang tersimpan di peramban Anda yang terkait dengan situs web ini. Anda dapat menggunakan opsi ini untuk mencegah penggunaan Cookies kapan saja. Jika Anda tidak menerima Cookies Kami, Anda mungkin mengalami beberapa ketidaknyamanan dalam penggunaan Situs Web dan beberapa fitur mungkin tidak berfungsi dengan baik.",
-      "browser_instructions": {
-        "chrome": "Untuk peramban web Chrome, silakan kunjungi halaman ini dari Google: https://support.google.com/accounts/answer/32050",
-        "internet_explorer": "Untuk peramban web Internet Explorer, silakan kunjungi halaman ini dari Microsoft: http://support.microsoft.com/kb/278835",
-        "firefox": "Untuk peramban web Firefox, silakan kunjungi halaman ini dari Mozilla: https://support.mozilla.org/en-US/kb/delete-cookies-remove-info-websites-stored",
-        "safari": "Untuk peramban web Safari, silakan kunjungi halaman ini dari Apple: https://support.apple.com/guide/safari/manage-cookies-and-website-data-sfri11471/mac",
-        "other": "Untuk peramban web lainnya, silakan kunjungi halaman web resmi peramban Anda."
-      }
+      "browser_instructions": [
+        { "browser": "Chrome", "url": "https://support.google.com/accounts/answer/32050" },
+        { "browser": "Internet Explorer", "url": "http://support.microsoft.com/kb/278835" },
+        { "browser": "Firefox", "url": "https://support.mozilla.org/en-US/kb/delete-cookies-remove-info-websites-stored" },
+        { "browser": "Safari", "url": "https://support.apple.com/guide/safari/manage-cookies-and-website-data-sfri11471/mac" }
+      ]
     },
     "more_information": {
       "title": "Informasi Lebih Lanjut tentang Cookies",

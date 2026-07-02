@@ -449,13 +449,12 @@
     "your_choices": {
       "title": "Your Choices Regarding Cookies",
       "content": "If You prefer to avoid the use of Cookies on the Website, first You must disable the use of Cookies in your browser and then delete the Cookies saved in your browser associated with this website. You may use this option for preventing the use of Cookies at any time. If You do not accept Our Cookies, You may experience some inconvenience in your use of the Website and some features may not function properly.",
-      "browser_instructions": {
-        "chrome": "For the Chrome web browser, please visit this page from Google: https://support.google.com/accounts/answer/32050",
-        "internet_explorer": "For the Internet Explorer web browser, please visit this page from Microsoft: http://support.microsoft.com/kb/278835",
-        "firefox": "For the Firefox web browser, please visit this page from Mozilla: https://support.mozilla.org/en-US/kb/delete-cookies-remove-info-websites-stored",
-        "safari": "For the Safari web browser, please visit this page from Apple: https://support.apple.com/guide/safari/manage-cookies-and-website-data-sfri11471/mac",
-        "other": "For any other web browser, please visit your web browser's official web pages."
-      }
+      "browser_instructions": [
+        { "browser": "Chrome", "url": "https://support.google.com/accounts/answer/32050" },
+        { "browser": "Internet Explorer", "url": "http://support.microsoft.com/kb/278835" },
+        { "browser": "Firefox", "url": "https://support.mozilla.org/en-US/kb/delete-cookies-remove-info-websites-stored" },
+        { "browser": "Safari", "url": "https://support.apple.com/guide/safari/manage-cookies-and-website-data-sfri11471/mac" }
+      ]
     },
     "more_information": {
       "title": "More Information about Cookies",
