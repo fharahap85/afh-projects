@@ -1,118 +1,120 @@
 import Layout from "../components/Layout";
 import SEO from "../components/SEO";
-import Image from "next/image";
 import { useRouter } from "next/router";
 import en from "../locales/en/common.json";
 import id from "../locales/id/common.json";
-import Link from "next/link";
+import { motion } from "framer-motion";
+
+const fadeUp = {
+  hidden: { opacity: 0, y: 30 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } },
+};
 
 export default function TermsAndConditions() {
   const { locale } = useRouter();
   const t = locale === "id" ? id : en;
+  const tc = t.terms_and_conditions;
 
   return (
     <Layout>
       <SEO title={t.terms_title} description={t.terms_description} />
 
-      {/* Hero Section */}
-      <section className="bg-white py-20 text-center">
-        <div className="container mx-auto px-6 md:px-12">
-          <h1 className="text-4xl sm:text-5xl font-extrabold text-gray-900 mb-6">{t.terms_hero_title}</h1>
-          <p className="text-lg sm:text-xl text-gray-600 leading-relaxed max-w-3xl mx-auto">{t.terms_hero_text}</p>
+      <section className="relative py-24 overflow-hidden">
+        <div className="absolute inset-0 bg-background">
+          <div className="absolute top-1/4 -right-32 w-96 h-96 bg-accent/5 rounded-full blur-3xl" />
+        </div>
+        <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div initial="hidden" animate="visible" variants={fadeUp}>
+            <span className="text-xs font-mono text-accent tracking-wider uppercase">Legal</span>
+            <h1 className="text-4xl sm:text-5xl font-extrabold tracking-tight mt-3 mb-4">{t.terms_hero_title}</h1>
+            <p className="text-muted text-lg">{t.terms_hero_text}</p>
+          </motion.div>
         </div>
       </section>
 
-      {/* Terms Content */}
-      <section className="container mx-auto px-6 md:px-12 py-12">
-        <div className="max-w-4xl mx-auto">
-          <p className="text-gray-700 mb-8">{t.terms_and_conditions.intro}</p>
+      <section className="pb-24">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="space-y-8 text-muted leading-relaxed">
+            <p>{tc.intro}</p>
 
-          <div className="space-y-8">
             <div>
-              <h2 className="text-2xl font-semibold mb-4">{t.terms_and_conditions.interpretation_and_definitions.title}</h2>
-              <h3 className="text-xl font-medium mb-2">{t.terms_and_conditions.interpretation_and_definitions.interpretation}</h3>
-              <p className="text-gray-700 mb-4">{t.terms_and_conditions.interpretation_and_definitions.interpretation}</p>
-              <h3 className="text-xl font-medium mb-2">Definitions</h3>
-              <ul className="list-disc pl-6 text-gray-700">
-                <li className="mb-2">{t.terms_and_conditions.interpretation_and_definitions.definitions.affiliate}</li>
-                <li className="mb-2">{t.terms_and_conditions.interpretation_and_definitions.definitions.country}</li>
-                <li className="mb-2">{t.terms_and_conditions.interpretation_and_definitions.definitions.company}</li>
-                <li className="mb-2">{t.terms_and_conditions.interpretation_and_definitions.definitions.device}</li>
-                <li className="mb-2">{t.terms_and_conditions.interpretation_and_definitions.definitions.service}</li>
-                <li className="mb-2">{t.terms_and_conditions.interpretation_and_definitions.definitions.terms}</li>
-                <li className="mb-2">{t.terms_and_conditions.interpretation_and_definitions.definitions.third_party_social_media}</li>
-                <li className="mb-2">{t.terms_and_conditions.interpretation_and_definitions.definitions.website}</li>
-                <li className="mb-2">{t.terms_and_conditions.interpretation_and_definitions.definitions.you}</li>
+              <h2 className="text-2xl font-bold text-foreground mb-4">{tc.interpretation_and_definitions.title}</h2>
+              <p className="mb-4">{tc.interpretation_and_definitions.interpretation}</p>
+              <h3 className="text-lg font-semibold text-foreground mb-3">Definitions</h3>
+              <ul className="space-y-2 list-disc pl-6">
+                {Object.values(tc.interpretation_and_definitions.definitions).map((def, i) => (
+                  <li key={i}>{def}</li>
+                ))}
               </ul>
             </div>
 
             <div>
-              <h2 className="text-2xl font-semibold mb-4">{t.terms_and_conditions.acknowledgment.title}</h2>
-              <p className="text-gray-700">{t.terms_and_conditions.acknowledgment.content}</p>
+              <h2 className="text-2xl font-bold text-foreground mb-4">{tc.acknowledgment.title}</h2>
+              <p>{tc.acknowledgment.content}</p>
             </div>
 
             <div>
-              <h2 className="text-2xl font-semibold mb-4">{t.terms_and_conditions.links_to_other_websites.title}</h2>
-              <p className="text-gray-700">{t.terms_and_conditions.links_to_other_websites.content}</p>
+              <h2 className="text-2xl font-bold text-foreground mb-4">{tc.links_to_other_websites.title}</h2>
+              <p>{tc.links_to_other_websites.content}</p>
             </div>
 
             <div>
-              <h2 className="text-2xl font-semibold mb-4">{t.terms_and_conditions.termination.title}</h2>
-              <p className="text-gray-700">{t.terms_and_conditions.termination.content}</p>
+              <h2 className="text-2xl font-bold text-foreground mb-4">{tc.termination.title}</h2>
+              <p>{tc.termination.content}</p>
             </div>
 
             <div>
-              <h2 className="text-2xl font-semibold mb-4">{t.terms_and_conditions.limitation_of_liability.title}</h2>
-              <p className="text-gray-700">{t.terms_and_conditions.limitation_of_liability.content}</p>
+              <h2 className="text-2xl font-bold text-foreground mb-4">{tc.limitation_of_liability.title}</h2>
+              <p>{tc.limitation_of_liability.content}</p>
             </div>
 
             <div>
-              <h2 className="text-2xl font-semibold mb-4">{t.terms_and_conditions.as_is_disclaimer.title}</h2>
-              <p className="text-gray-700">{t.terms_and_conditions.as_is_disclaimer.content}</p>
+              <h2 className="text-2xl font-bold text-foreground mb-4">{tc.as_is_disclaimer.title}</h2>
+              <p>{tc.as_is_disclaimer.content}</p>
             </div>
 
             <div>
-              <h2 className="text-2xl font-semibold mb-4">{t.terms_and_conditions.governing_law.title}</h2>
-              <p className="text-gray-700">{t.terms_and_conditions.governing_law.content}</p>
+              <h2 className="text-2xl font-bold text-foreground mb-4">{tc.governing_law.title}</h2>
+              <p>{tc.governing_law.content}</p>
             </div>
 
             <div>
-              <h2 className="text-2xl font-semibold mb-4">{t.terms_and_conditions.disputes_resolution.title}</h2>
-              <p className="text-gray-700">{t.terms_and_conditions.disputes_resolution.content}</p>
+              <h2 className="text-2xl font-bold text-foreground mb-4">{tc.disputes_resolution.title}</h2>
+              <p>{tc.disputes_resolution.content}</p>
             </div>
 
             <div>
-              <h2 className="text-2xl font-semibold mb-4">{t.terms_and_conditions.eu_users.title}</h2>
-              <p className="text-gray-700">{t.terms_and_conditions.eu_users.content}</p>
+              <h2 className="text-2xl font-bold text-foreground mb-4">{tc.eu_users.title}</h2>
+              <p>{tc.eu_users.content}</p>
             </div>
 
             <div>
-              <h2 className="text-2xl font-semibold mb-4">{t.terms_and_conditions.us_legal_compliance.title}</h2>
-              <p className="text-gray-700">{t.terms_and_conditions.us_legal_compliance.content}</p>
+              <h2 className="text-2xl font-bold text-foreground mb-4">{tc.us_legal_compliance.title}</h2>
+              <p>{tc.us_legal_compliance.content}</p>
             </div>
 
             <div>
-              <h2 className="text-2xl font-semibold mb-4">{t.terms_and_conditions.severability_and_waiver.title}</h2>
-              <h3 className="text-xl font-medium mb-2">Severability</h3>
-              <p className="text-gray-700 mb-4">{t.terms_and_conditions.severability_and_waiver.severability}</p>
-              <h3 className="text-xl font-medium mb-2">Waiver</h3>
-              <p className="text-gray-700">{t.terms_and_conditions.severability_and_waiver.waiver}</p>
+              <h2 className="text-2xl font-bold text-foreground mb-4">{tc.severability_and_waiver.title}</h2>
+              <h3 className="text-lg font-semibold text-foreground mb-2">Severability</h3>
+              <p className="mb-4">{tc.severability_and_waiver.severability}</p>
+              <h3 className="text-lg font-semibold text-foreground mb-2">Waiver</h3>
+              <p>{tc.severability_and_waiver.waiver}</p>
             </div>
 
             <div>
-              <h2 className="text-2xl font-semibold mb-4">{t.terms_and_conditions.translation_interpretation.title}</h2>
-              <p className="text-gray-700">{t.terms_and_conditions.translation_interpretation.content}</p>
+              <h2 className="text-2xl font-bold text-foreground mb-4">{tc.translation_interpretation.title}</h2>
+              <p>{tc.translation_interpretation.content}</p>
             </div>
 
             <div>
-              <h2 className="text-2xl font-semibold mb-4">{t.terms_and_conditions.changes_to_terms.title}</h2>
-              <p className="text-gray-700">{t.terms_and_conditions.changes_to_terms.content}</p>
+              <h2 className="text-2xl font-bold text-foreground mb-4">{tc.changes_to_terms.title}</h2>
+              <p>{tc.changes_to_terms.content}</p>
             </div>
 
             <div>
-              <h2 className="text-2xl font-semibold mb-4">{t.terms_and_conditions.contact_us.title}</h2>
-              <p className="text-gray-700">{t.terms_and_conditions.contact_us.content}</p>
-              <p className="text-gray-700">{t.terms_and_conditions.contact_us.phone}</p>
+              <h2 className="text-2xl font-bold text-foreground mb-4">{tc.contact_us.title}</h2>
+              <p>{tc.contact_us.content}</p>
+              <p>{tc.contact_us.phone}</p>
             </div>
           </div>
         </div>
