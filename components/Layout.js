@@ -3,9 +3,9 @@ import Footer from "./Footer";
 
 export default function Layout({ children }) {
   return (
-    <div className="font-script">
+    <div className="min-h-screen">
       <Header />
-      <main className="">{children}</main>
+      <main>{children}</main>
       <Footer />
     </div>
   );
