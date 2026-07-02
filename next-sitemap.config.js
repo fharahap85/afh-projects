@@ -1,17 +1,17 @@
 /** @type {import('next-sitemap').IConfig} */
 module.exports = {
-  siteUrl: "https://yourdomain.com", // ganti dengan domain asli kamu
+  siteUrl: "https://afhprojects.web.id",
   generateRobotsTxt: true,
   changefreq: "weekly",
   priority: 0.7,
   sitemapSize: 7000,
   alternateRefs: [
     {
-      href: "https://yourdomain.com",
+      href: "https://afhprojects.web.id",
       hreflang: "en",
     },
     {
-      href: "https://yourdomain.com/id",
+      href: "https://afhprojects.web.id/id",
       hreflang: "id",
     },
   ],
